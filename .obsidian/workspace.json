@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "88d3b67402a79613",
+        "id": "e129bb9121d2861f",
         "type": "tabs",
         "children": [
           {
-            "id": "fc8a94d2f840e65c",
+            "id": "760dcda4f6579e68",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Preparation CTF/Scripts Utils.md",
+                "file": "Cloud Computing/Deploiement d'un Rest API dans un cloud.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scripts Utils"
+              "title": "Deploiement d'un Rest API dans un cloud"
             }
           }
         ]
@@ -170,8 +170,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fc8a94d2f840e65c",
+  "active": "760dcda4f6579e68",
   "lastOpenFiles": [
+    "Pasted image 20251216112008.png",
+    "Cloud Computing/Notes.md",
+    "Cloud Computing/Deploiement d'un Rest API dans un cloud.md",
+    "Oracle/Leçon/Leçon.md",
+    "Oracle/Leçon/179_PL SQL en Oracle.pdf",
+    "Cryptographie/Notes.md",
+    "Cryptographie/Introduction.md",
+    "Intéropérabilité et architecture client-serveur/Interoperabilit-_client-serveur-main/projet-MOM/README.md",
+    "Admin sys avancé/Projet Cloud/Déployer NextCloud sous Ubuntu server 22.04.md",
+    "Admin sys avancé/Projet Cloud/Synchroniser les dossiers Utilisateur Windows vers NextCloud avec le client NextCloud.md",
+    "Admin sys avancé/Projet Cloud/Déployer NextCloud avec Docker.md",
+    "Preparation CTF/Scripts Utils.md",
+    "Preparation CTF/Preparation.md",
+    "DevOps L3/DevOps.md",
     "Lab CEHV13/Analyse des vulnérabilités.md",
     "Intéropérabilité et architecture client-serveur/Projet/Middleware Orienté Message (MOM) basé sur une file d’attente..md",
     "Intéropérabilité et architecture client-serveur/consumer_mail.py",
@@ -182,8 +196,6 @@
     "Intéropérabilité et architecture client-serveur/Projet",
     "Untitled",
     "Intéropérabilité et architecture client-serveur/Leçon.md",
-    "Cryptographie/Notes.md",
-    "Cryptographie/Introduction.md",
     "VOIP/Introduction.md",
     "VOIP/Zoiper5_5.6.11_x86_64.deb",
     "VOIP/ViciBox_V12.x86_64-12.0.2.iso",
@@ -192,25 +204,14 @@
     "ADMIN SYSTEME WIN SERVEUR/Serveur DNS.pdf",
     "ADMIN SYSTEME WIN SERVEUR/Transfert de zones.md",
     "ADMIN SYSTEME WIN SERVEUR/Service DNS.md",
-    "Preparation CTF/Scripts Utils.md",
     "Preparation CTF",
     "Lab CEHV13/ELK Stack.md",
     "Lab CEHV13/Leçon.md",
-    "Lab CEHV13/Untitled",
     "Anglais/Vocabulary.md",
     "Intéropérabilité et architecture client-serveur/WhatsApp Image 2025-11-19 at 11.36.10.jpeg",
     "Intéropérabilité et architecture client-serveur/WhatsApp Image 2025-11-19 at 11.23.17.jpeg",
     "MCD ET MLD.md",
     "Cryptographie/Exercice.md",
-    "Francais/Art Oratoire L3.md",
-    "Francais/Français.md",
-    "Admin réseau/MODULE SNMP (Simple Network Management Protocol(IP service)).md",
-    "Admin réseau/Réseaux.md",
-    "Lien de documentation.md",
-    "Lien de Documentation.md",
-    "Cloud Computing/Notes.md",
-    "Simulation Attaque défense sous VirtualBox.md",
-    "Oracle/Leçon/Leçon.md",
     "Untitled.canvas",
     "image8.png",
     "Pasted image 20251120102453.png",

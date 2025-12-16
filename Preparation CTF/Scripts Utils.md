@@ -87,7 +87,7 @@ fi
 # 2. Détection de la technologie
 echo
 echo "[+] Détection des technologies Web (http-enum)..."
-nmap --script http-enum -p$WEB_PORTS $TARGET -oN tech_detection.txt
+nmap --script http-enum -p $WEB_PORTS $TARGET -oN tech_detection.txt
 echo "  → Résultat enregistré dans tech_detection.txt"
 
 # 3. Scan vulnérabilités Web NSE
@@ -235,7 +235,7 @@ fi
 echo
 
 # 7. MySQL - Test accès root sans mot de passe
-if nmap -p3306 --open $TARGET | grep -q "3306/open"; then
+if nmap -p 3306 --open $TARGET | grep -q "3306/open"; then
     echo "[+] Test MySQL (port 3306)"
     nmap --script mysql-empty-password,mysql-info,mysql-users,mysql-vuln-cve2012-2122 \
          -p3306 $TARGET -oN mysql_audit.txt

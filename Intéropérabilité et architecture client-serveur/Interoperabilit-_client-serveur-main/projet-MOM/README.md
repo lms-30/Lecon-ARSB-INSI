@@ -16,6 +16,19 @@
 ## Démarrage rapide
 
 1. Lancer RabbitMQ :
-```bash
+```
 docker-compose up -d
 # vérifier interface management: http://localhost:15672 (guest/guest)
+```
+2. Lancer le serveur BDD
+```
+node indes.js
+```
+3. Lancer l'application responsable de la notification des utilisatuer
+```
+go run main.go
+```
+3. Lancer le client
+```
+python3 main.py
+```

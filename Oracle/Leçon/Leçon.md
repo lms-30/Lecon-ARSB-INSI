@@ -38,3 +38,8 @@ SELECT SUBSTR(prenom, 1, 1) || '. ' nom AS "identité",
 	FROM clients;
 ```
 
+DISCTINCT : pour evité les doublons
+ORDER BY : triage par ordre 
+UNION : 
+
+raha tsy en relation ny table dia tsy afaka atao jointure, fa ny UNION de mety fona

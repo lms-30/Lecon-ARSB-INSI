@@ -65,3 +65,18 @@ Instead of + Ving : toy izay
 
 **Telephone number**
  
+
+
+
+
+
+
+To err is human : l'erreur est humaine
+Strike the iran while it's hot : veleso ny vy dieny bola mafana
+free will : safidy malaka
+if i were you: si j'étais toi
+
+
+##### Past perfect (past of the past)
+
+two action

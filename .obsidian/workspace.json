@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "798febb5b2097abf",
+        "id": "896ce598745eb8de",
         "type": "tabs",
         "children": [
           {
-            "id": "895845c1be3c0750",
+            "id": "10ed1bd24ca891aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anglais/Vocabulary.md",
+                "file": "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale/Système de détection et de prévention des attaques sur machine locale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vocabulary"
+              "title": "Système de détection et de prévention des attaques sur machine locale"
             }
           }
         ]
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Rechercher"
+              "title": "Search"
             }
           },
           {
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 406.5
   },
   "right": {
     "id": "f627159f93f4811b",
@@ -170,54 +170,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "895845c1be3c0750",
+  "active": "10ed1bd24ca891aa",
   "lastOpenFiles": [
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/Monitoring d’un serveur Web Docker avec Uptime Kuma.md",
+    "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale/Système de détection et de prévention des attaques sur machine locale.md",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/architecture.png",
+    "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale/architecture.png",
+    "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale/ChatGPT Image 12 janv. 2026, 13_52_52.png",
+    "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale",
+    "Cyberdéfence/Projet/nouveau dossier",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma.md",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/statuts_du_serveur_web.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/serveur_web.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/mise_en_service_du_serveur.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/mise_en_hors_ligne.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/docker_compose_ps.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/dashboard_uptime_kima.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma/ChatGPT Image 12 janv. 2026, 13_22_42.png",
+    "Cyberdéfence/Projet/Monitoring d’un serveur Web Docker avec Uptime Kuma",
+    "Cyberdéfence/Projet/Système de détection et de prévention des attaques sur machine locale.md",
+    "Shell/exercice/Exercice.md",
+    "VOIP/Notes.md",
+    "Shell/exercice",
+    "Shell/dossier-des-fichiers-etude/6. Boucle while/while.sh",
+    "Shell/dossier-des-fichiers-etude/6. Boucle while",
+    "Shell/dossier-des-fichiers-etude/5. Boucle for/boucle_for.sh",
+    "Lab CEHV13/Write up machines vulnérables/Empire LupinOne.md",
+    "Lab CEHV13/Write up machines vulnérables",
+    "2026-01-08.md",
+    "Untitled 1.base",
+    "Lab CEHV13/Leçon.md",
+    "Shell/Leçon.md",
+    "Shell/dossier-des-fichiers-etude/5. Boucle for",
+    "Cyberdéfence/Mise en place d'un système IDS et IPS avec Suricata sur Debian 12 et surveillance avec OPNsense.md",
+    "Cyberdéfence/Leçon.md",
+    "Cyberdéfence/InjectionSQL.md",
+    "Anglais/Vocabulary.md",
     "ADMIN SYSTEME WIN SERVEUR/Introduction windows serveur.md",
     "ADMIN SYSTEME WIN SERVEUR/Service DNS.md",
-    "Anglais/Vocabulary.md",
     "Admin sys avancé/Projet Cloud/Déployer NextCloud sous Ubuntu server 22.04.md",
-    "Pasted image 20260107110033.png",
-    "Pasted image 20260107103821.png",
-    "Pasted image 20260107103718.png",
     "DevOps L3/Exercice.md",
     "DevOps L3/DevOps.md",
-    "Pasted image 20260107100825.png",
-    "DevOps L3/teraform-docker/terraform",
-    "DevOps L3/teraform-docker/teraform/main.tf",
-    "DevOps L3/teraform-docker/docker-compose.yml",
-    "DevOps L3/teraform-docker/teraform",
-    "DevOps L3/teraform-docker",
-    "Pasted image 20260107085248.png",
-    "Pasted image 20260107084556.png",
-    "Pasted image 20260107084347.png",
     "Admin sys avancé/Projet Cloud/Déployer NextCloud avec Docker.md",
     "Preparation CTF/Preparation.md",
     "Preparation CTF/Metasploitable3.md",
     "Preparation CTF/Metasploitable2.md",
     "Preparation CTF/wackopicko.md",
     "Preparation CTF/Samba.md",
-    "Preparation CTF/BWAPP.md",
-    "Preparation CTF/Ingress-nginx.md",
-    "Preparation CTF/Craftcms.md",
-    "Preparation CTF/1 panel.md",
-    "Preparation CTF/LangFlow.md",
-    "Preparation CTF/Gradio.md",
-    "Preparation CTF/Erlang.md",
-    "Preparation CTF/Apache cxf.md",
-    "Preparation CTF/Cacti.md",
-    "rappotCTF.zip",
-    "Cloud Computing/Deploiement d'un Rest API dans un cloud.md",
-    "Pasted image 20251216112008.png",
-    "Cloud Computing/Notes.md",
-    "Oracle/Leçon/Leçon.md",
-    "Oracle/Leçon/179_PL SQL en Oracle.pdf",
-    "Cryptographie/Notes.md",
-    "Cryptographie/Introduction.md",
-    "Intéropérabilité et architecture client-serveur/consumer_mail.py",
-    "Intéropérabilité et architecture client-serveur/consumer_db.py",
-    "Intéropérabilité et architecture client-serveur/producer.py",
-    "Pasted image 20251209091044.png",
-    "Pasted image 20251209090736.png",
     "Untitled.canvas",
     "Sans titre 1.canvas",
     "Sans titre.canvas"

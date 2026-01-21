@@ -69,6 +69,7 @@ Keygen va généré
 
 **vérification** :  si PGCD(e,phi(n)) = 1, donc le chiffrement est bonne
 
+<<<<<<< HEAD
 
 ## Résumé :
 
@@ -100,3 +101,5 @@ Tout le monde peut chiffre
 {0,1}* :   0 et 1 repeter plusieur fois
 Apina izay tsy ampy: **padding(bourage)**
 
+=======
+>>>>>>> b43adc8c77255ca319db4aa9eada86a8158b98ac

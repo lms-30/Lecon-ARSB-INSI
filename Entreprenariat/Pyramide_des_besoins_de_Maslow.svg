@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="Pyramide_des_besoins_de_Maslow.svg"
+   id="svg1936"
+   height="1125.5715"
+   width="1861.7122"
+   version="1.0">
+  <metadata
+     id="metadata64">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg1936"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="1280"
+     inkscape:cy="504.26073"
+     inkscape:cx="974.7688"
+     inkscape:zoom="0.63741416"
+     showgrid="false"
+     id="namedview62"
+     inkscape:window-height="1200"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="gradients">
+    <linearGradient
+       id="linearGradient1">
+      <stop
+         id="stop1a"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop1b"
+         offset="1"
+         style="stop-color:#807eed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2">
+      <stop
+         id="stop2a"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop2b"
+         offset="1"
+         style="stop-color:#18fe04;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3">
+      <stop
+         id="stop3a"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop3b"
+         offset="1"
+         style="stop-color:#fefc04;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4">
+      <stop
+         id="stop4a"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop4b"
+         offset="1"
+         style="stop-color:#ff8207;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5">
+      <stop
+         id="stop5a"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop5b"
+         offset="1"
+         style="stop-color:#f90909;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       gradientTransform="matrix(-1.134697,1.134697,-1.156074,-1.156074,1957.031,347.5224)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient1"
+       id="gradient1"
+       fy="439.51736"
+       fx="334.28568"
+       r="262.46866"
+       cy="439.51736"
+       cx="334.28568" />
+    <radialGradient
+       gradientTransform="matrix(-2.842556,2.842556,-2.463476,-2.463476,3172.792,661.2344)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient2"
+       id="gradient2"
+       fy="530.66846"
+       fx="279.99408"
+       r="263.681"
+       cy="530.66846"
+       cx="279.99408" />
+    <radialGradient
+       gradientTransform="matrix(-3.449006,3.449006,-2.989051,-2.989051,3621.501,801.9635)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient3"
+       id="gradient3"
+       fy="530.66846"
+       fx="279.99408"
+       r="263.681"
+       cy="530.66846"
+       cx="279.99408" />
+    <radialGradient
+       gradientTransform="matrix(-4.010533,4.010533,-3.475693,-3.475693,4036.971,932.2677)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4"
+       id="gradient4"
+       fy="530.66846"
+       fx="279.99408"
+       r="263.681"
+       cy="530.66846"
+       cx="279.99408" />
+    <radialGradient
+       gradientTransform="matrix(-4.56083,4.56083,-3.952603,-3.952603,4444.131,1059.966)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient5"
+       id="gradient5"
+       fy="530.66846"
+       fx="279.99408"
+       r="263.681"
+       cy="530.66846"
+       cx="279.99408" />
+    <radialGradient
+       r="262.46866"
+       fy="439.51736"
+       fx="334.28568"
+       cy="439.51736"
+       cx="334.28568"
+       gradientTransform="matrix(-1.134697,1.134697,-1.156074,-1.156074,1957.031,347.5224)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient163"
+       xlink:href="#linearGradient1"
+       inkscape:collect="always" />
+  </defs>
+  <path
+     d="M 1212.7894,6.6045036 1857.382,1123.0715 H 568.19688 Z"
+     style="fill:url(#gradient5);stroke:#000000;stroke-width:5"
+     id="triangle5" />
+  <path
+     d="M 1857.382,1123.0715 2.1535688e-5,1123.0555"
+     style="stroke:#000000;stroke-width:5"
+     id="line5" />
+  <text
+     x="8.1855412"
+     y="1102.0198"
+     style="font-size:65px;font-family:'Bitstream Vera Sans';fill:#f90909;stroke:#747474"
+     id="label5">Physiologique</text>
+  <path
+     d="M 1212.7892,6.2464221 1779.607,988.00374 645.97136,988.00371 Z"
+     style="fill:url(#gradient4);stroke:#000000;stroke-width:5"
+     id="triangle4" />
+  <path
+     d="M 1768.8534,988.00083 H 0.02523154"
+     style="stroke:#000000;stroke-width:5"
+     id="line4" />
+  <text
+     x="8.1855412"
+     y="972.01984"
+     style="font-size:65px;font-family:'Bitstream Vera Sans';fill:#ff8207;stroke:#747474"
+     id="label4">Sécurité</text>
+  <path
+     d="m 1212.7893,5.8800184 487.456,844.2985416 -974.91195,-2e-5 z"
+     style="fill:url(#gradient3);stroke:#000000;stroke-width:5"
+     id="triangle3" />
+  <path
+     d="M 1685.9659,851.24463 0.15131154,849.54609"
+     style="stroke:#000000;stroke-width:5"
+     id="line3" />
+  <text
+     x="8.1855412"
+     y="832.01984"
+     style="font-size:65px;font-family:'Bitstream Vera Sans';fill:#fefc04;stroke:#747474"
+     id="label3">Amour/appartenance</text>
+  <path
+     d="m 1212.7893,5.4840444 401.745,695.8427756 -803.49001,-10e-6 z"
+     style="fill:url(#gradient2);stroke:#000000;stroke-width:5"
+     id="triangle2" />
+  <text
+     y="576.19751"
+     x="1213.7743"
+     style="font-size:35.0407px;font-family:'Bitstream Vera Sans';text-align:center;text-anchor:middle;stroke-width:1"
+     id="text2"><tspan
+       style="stroke-width:1"
+       y="576.19751"
+       x="1213.7743"
+       id="tspan184"
+       sodipodi:role="line">estime de soi,</tspan><tspan
+       style="stroke-width:1"
+       id="tspan188"
+       y="619.99841"
+       x="1213.7743"
+       sodipodi:role="line">confiance, réussite, respect</tspan><tspan
+       style="stroke-width:1"
+       id="tspan194"
+       y="663.79926"
+       x="1213.7743"
+       sodipodi:role="line">des autres, respect par les autres</tspan></text>
+  <path
+     d="M 1589.2381,700.40104 0.02099154,702.09958"
+     style="stroke:#000000;stroke-width:5"
+     id="line2" />
+  <text
+     x="8.1855412"
+     y="692.01984"
+     style="font-size:65px;font-family:'Bitstream Vera Sans';fill:#18fe04;stroke:#747474"
+     id="label2">Estime</text>
+  <path
+     d="m 1212.7889,5 296.9869,514.39649 -593.97386,-10e-6 z"
+     style="fill:url(#radialGradient163);stroke:#000000;stroke-width:5"
+     id="triangle1" />
+  <path
+     d="M 1479.0612,519.39667 0.01251154,520.57721"
+     style="stroke:#000000;stroke-width:5"
+     id="line1" />
+  <text
+     x="8.1855412"
+     y="512.01984"
+     style="font-size:65px;font-family:'Bitstream Vera Sans';fill:#807eed;stroke:#747474"
+     id="label1">Auto-actualisation</text>
+  <text
+     y="206.93498"
+     x="1214.5442"
+     style="font-size:35.0407px;font-family:'Bitstream Vera Sans';text-align:center;text-anchor:middle;stroke-width:1"
+     id="text113"><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       id="tspan115"
+       x="1214.5442"
+       y="206.93498">moralité,</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       id="tspan117"
+       x="1214.5442"
+       y="250.73587">créativité,</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       x="1214.5442"
+       y="294.53674"
+       id="tspan119">spontanéité,</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       x="1214.5442"
+       y="338.33762"
+       id="tspan123">résolution</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       x="1214.5442"
+       y="382.13849"
+       id="tspan131">des problèmes,</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       x="1214.5442"
+       y="425.93936"
+       id="tspan127">absence de préjugés,</tspan><tspan
+       style="stroke-width:1"
+       sodipodi:role="line"
+       x="1214.5442"
+       y="469.74023"
+       id="tspan129">acceptation des faits</tspan></text>
+  <text
+     x="276.42651"
+     y="93.23967"
+     id="text198"
+     style="font-size:35.0407px;font-family:'Bitstream Vera Sans';text-align:center;text-anchor:middle;stroke-width:1"><tspan
+       style="stroke-width:1"
+       id="tspan196"
+       y="785.29388"
+       x="1213.7657">amitié, famille, intimité sexuelle</tspan></text>
+  <text
+     id="text204"
+     style="font-size:35.0407px;font-family:'Bitstream Vera Sans';text-align:center;text-anchor:middle;stroke-width:1"
+     x="1213.1669"
+     y="909.95215"><tspan
+       style="stroke-width:1"
+       id="tspan212"
+       y="909.95215"
+       x="1213.1669"
+       sodipodi:role="line">sécurité du corps, de l'emploi, des ressources, de</tspan><tspan
+       style="stroke-width:1"
+       id="tspan216"
+       y="953.75305"
+       x="1213.1669"
+       sodipodi:role="line">la moralité, de la famille, de la santé, de la propriété</tspan></text>
+  <text
+     x="276.66608"
+     y="105.83687"
+     id="text220"
+     style="font-size:35.0407px;font-family:'Bitstream Vera Sans';text-align:center;text-anchor:middle;stroke-width:1"><tspan
+       style="stroke-width:1"
+       y="1043.176"
+       x="1214.0052"
+       id="tspan244"
+       sodipodi:role="line"><tspan
+         style="stroke-width:1"
+         id="tspan218"
+         y="1043.176"
+         x="1214.0052">respiration, nourriture, eau, sexe,</tspan></tspan><tspan
+       style="stroke-width:1"
+       id="tspan248"
+       y="1086.9769"
+       x="1214.0052"
+       sodipodi:role="line">sommeil, homéostase, excrétion</tspan></text>
+</svg>

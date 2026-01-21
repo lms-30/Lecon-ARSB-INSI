@@ -1,0 +1,17 @@
+---
+- name: Pull images Debian et Ubuntu avec Ansible
+  hosts: local
+  become: false
+
+  tasks:
+    - name: Pull image Debian
+      community.docker.docker_image:
+        name: debian
+        tag: latest
+        source: pull
+
+    - name: Pull image Ubuntu
+      community.docker.docker_image:
+        name: ubuntu
+        tag: latest
+        source: pull

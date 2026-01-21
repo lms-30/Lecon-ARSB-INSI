@@ -1,0 +1,2 @@
+La vulnérabilité CVE‑2023‑51449 a été identifiée en corrélant la version de Gradio installée (4.10.0) avec les bases de données publiques de vulnérabilités.  
+Cette vulnérabilité affecte Gradio 4.10.0 et peut permettre à un attaquant de manipuler des entrées non validées, entraînant une exécution de code arbitraire ou un comportement non sécurisé de l’application.

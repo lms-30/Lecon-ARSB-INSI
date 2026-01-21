@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]{\normalfont\bfseries\huge}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{LAHINIRIKO}
+\lhead{Mini-mémoire IoT}
+\rfoot{\thepage}
+
+\begin{document}
+
+% Page de garde
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{captures/logo.jpg}\par\vspace{1cm}
+    {\scshape\LARGE Projet de Réseau Informatique \par}
+    \vspace{1.5cm}
+    {\Huge\bfseries Système de Vidéosurveillance avec IoT\par}
+    \vspace{2cm}
+    {\Large\itshape Réalisé par : LAHINIRIKO\par}
+    \vfill
+    {\large Juin 2025\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\chapter*{Introduction}
+Dans ce chapitre, nous allons simuler un mini-réseau LAN avec une technologie IoT (Internet Of Things), suivi d'une simulation de l’utilisation de serveurs DNS, FTP, HTTP/HTTPS, Mails, et aussi serveur IoT pour assurer l'utilisation des objets connectés.
+
+\chapter{Topologie}
+Dans cette simulation, nous allons utiliser une topologie en étoile avec deux bâtiments :
+
+\begin{itemize}
+  \item \textbf{Bâtiment A} : contient 5 salles équipées de vidéosurveillances pour renforcer la sécurité matérielle du réseau.
+  \item \textbf{Bâtiment B} : contient 2 salles : une salle de contrôle des entrées/sorties et des failles, et une salle de direction.
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{captures/Pasted image 20250601201000.png}
+    \caption{Topologie du réseau}
+\end{figure}
+
+\section*{VLANs et Sous-réseaux DHCP}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{VLAN ID} & \textbf{Nom VLAN} & \textbf{Sous-réseau IP} & \textbf{Gateway} & \textbf{Plage DHCP} \\
+\hline
+10 & SALLE0 & 192.168.80.0/27 & 192.168.80.1 & 192.168.80.2 – 192.168.80.30 \\
+\hline
+20 & SALLE1 & 192.168.80.32/27 & 192.168.80.33 & 192.168.80.34 – 192.168.80.62 \\
+\hline
+30 & SALLE2 & 192.168.80.64/27 & 192.168.80.65 & 192.168.80.66 – 192.168.80.94 \\
+\hline
+40 & SERVEURS & 192.168.80.96/27 & 192.168.80.97 & Statique \\
+\hline
+\end{longtable}
+
+\chapter{Configuration Réseau}
+% Inclure ici les étapes de configuration si besoin, ou insérer d'autres images de captures.
+
+\section*{Captures supplémentaires}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{captures/Pasted image 20250602070154.png}
+    \caption{Exemple de configuration réseau}
+\end{figure}
+
+% Répétez ce bloc pour insérer d'autres images :
+% \includegraphics[width=0.8\textwidth]{captures/NOM_DU_FICHIER.png}
+
+\chapter*{Conclusion}
+Ce projet nous a permis de mettre en œuvre les principes de sécurité et de communication dans un réseau intelligent à travers les outils de simulation et les protocoles standards du monde IoT.
+
+\end{document}

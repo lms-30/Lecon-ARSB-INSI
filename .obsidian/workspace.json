@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e79bd1ca856fc7fe",
+        "id": "8fe634f8dcdd6569",
         "type": "tabs",
         "children": [
           {
-            "id": "cc322687672cd777",
+            "id": "89b42087533bc83b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "VOIP/Projet/MISE EN PLACE ET CONFIGURATION D’UN SERVEUR ASTERISK SOUS CENTOS.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "MISE EN PLACE ET CONFIGURATION D’UN SERVEUR ASTERISK SOUS CENTOS"
+              "title": "New tab"
             }
           }
         ]
@@ -180,8 +176,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "cc322687672cd777",
+  "active": "89b42087533bc83b",
   "lastOpenFiles": [
+    "Admin réseau/Module SSH (Secure SHell).md",
+    "Admin réseau/Architecture LAN.md",
+    "VOIP/Projet/MISE EN PLACE ET CONFIGURATION D’UN SERVEUR ASTERISK SOUS CENTOS.md",
+    "Projet.md",
+    "Projet Supervison reseau/Supervision réseau avec NTOPNG.md",
+    "Projet Supervison reseau",
+    "Cryptographie/Notes.md",
+    "Admin réseau/Bonne Pratique/TOPOLOGIE.md",
+    "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
+    "Admin réseau/Bonne Pratique",
     "Untitled.base",
     "Untitled 1.base",
     "Pasted image 20260121162453.png",
@@ -189,9 +195,7 @@
     "Pasted image 20260121161954.png",
     "Pasted image 20260121161708.png",
     "Pasted image 20260121161426.png",
-    "VOIP/Projet/MISE EN PLACE ET CONFIGURATION D’UN SERVEUR ASTERISK SOUS CENTOS.md",
     "VOIP/Projet",
-    "Projet.md",
     "Cloud Computing/Azure CLI.md",
     "Cloud Computing/Notes.md",
     "DevOps L3/Correction/Correction.md",
@@ -200,10 +204,8 @@
     "DevOps L3/Correction/ansible-docker",
     "DevOps L3/Correction/nouveau dossier",
     "DevOps L3/Correction",
-    "Untitled",
     "DevOps L3/Exercice.md",
     "DevOps L3/DevOps.md",
-    "Cryptographie/Notes.md",
     "Cryptographie/Introduction.md",
     "Lab CEHV13/Write up machines vulnérables/Grotesque 3.md",
     "Pasted image 20260119132324.png",
@@ -214,7 +216,6 @@
     "Admin sys avancé/Projet Cloud/Déployer NextCloud sous Ubuntu server 22.04.md",
     "Admin sys avancé/Projet Cloud/Déployer NextCloud avec Docker.md",
     "Hacking éthique/Empire Lupin One.md",
-    "doc/env.md",
-    "doc"
+    "doc/env.md"
   ]
 }

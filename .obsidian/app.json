@@ -1,12 +1,9 @@
 {
-<<<<<<< HEAD
-=======
-  "promptDelete": false,
->>>>>>> b43adc8c77255ca319db4aa9eada86a8158b98ac
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "showInlineTitle": true
 }

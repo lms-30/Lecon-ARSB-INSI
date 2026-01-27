@@ -8,11 +8,7 @@
   "outgoing-link": true,
   "tag-pane": true,
   "footnotes": false,
-<<<<<<< HEAD
   "properties": true,
-=======
-  "properties": false,
->>>>>>> b43adc8c77255ca319db4aa9eada86a8158b98ac
   "page-preview": true,
   "daily-notes": true,
   "templates": true,

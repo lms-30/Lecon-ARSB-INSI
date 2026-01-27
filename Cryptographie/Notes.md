@@ -103,3 +103,25 @@ Apina izay tsy ampy: **padding(bourage)**
 
 =======
 >>>>>>> b43adc8c77255ca319db4aa9eada86a8158b98ac
+
+
+## Type d'authentification
+
+- something you now : authentification par mot de passe
+- something  you have : authentification par certificat
+- something you are :authentification par empreinte
+
+**2FA:** double authetification (il utilise les 2 de ces trois types)
+MFA : authentification multiple
+
+près-image de première ordre : on vous une mot de mot de passe, chercher le résumé de cette mot de passe
+près-image de séconde ordre : on vous une  qui on le même résumé
+
+
+
+
+HMAC
+HMIC
+
+SHA3-256 : mampiase ana structure en éponges
+SHA256 : miampiasa ana structure

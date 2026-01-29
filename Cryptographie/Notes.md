@@ -120,8 +120,45 @@ près-image de séconde ordre : on vous une  qui on le même résumé
 
 
 
-HMAC
-HMIC
+HMAC : HMAC signifie « ==Hash-based Message Authentication Code== » (Code d'authentification de message basé sur le hachage). C'est un mécanisme de sécurité cryptographique qui utilise une fonction de hachage (comme SHA-256) et une clé secrète partagée pour garantir à la fois l'**intégrité** et l'**authenticité** d'un message, prouvant qu'il n'a pas été altéré.
+
 
 SHA3-256 : mampiase ana structure en éponges
 SHA256 : miampiasa ana structure
+
+
+
+## Chiffrement
+
+**Qui peut chiffrer ? A partir de quelle clé ?**
+
+Tout le mode peut faire un chiffrement à partir de la clé publique du destinateur.
+
+**Qui peut déchiffrer ? à partir de quelle clé ?**
+Seul le destinataire peut déchiffrer à partir de sa clé privé
+
+**Q'est qui **
+
+
+
+**Comment on fait de la signature ?**
+on peut faire la signature à partir de de l'information haché 
+
+**Qui peut signer ?**
+seul le l'autorité de certificat peut signer à partir de son clé privé de hash de l'information de la destinateur
+
+**Qui peut vérifier la signature ?**
+Tout le monde peut vérifier la signature à partir de clé publique de la destination
+
+**Comment être sûr que la clé publique appartient bien au destinataire et pas à un attaquant ?**
+En **authentification par certificat**, la **méthode de challenge** (ou _challenge–response_) est un **mécanisme de vérification** qui permet de prouver que le client **possède réellement la clé privée** associée à son certificat — **sans jamais l’envoyer**.
+
+Fonctionnement :
+- Le destinataire possède une **clé publique** et une **clé privée**.
+- Sa **clé publique est placée dans un certificat numérique**.
+- Une **autorité de certification (CA)** vérifie l’identité du destinataire.
+- La CA **signe le certificat**, ce qui prouve que la clé publique est fiable.
+- Le destinataire envoie son **certificat** au client.
+- Le client **vérifie la signature de la CA**.
+- Si la CA est de confiance, le client **fait confiance à la clé publique**.
+- Le client sait alors que **la clé publique appartient bien au destinataire**.

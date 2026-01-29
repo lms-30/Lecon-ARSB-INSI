@@ -54,3 +54,28 @@ Faire un résumé, c'est réécrire un texte, en respectant le ton, le style et 
 
 
 
+# Épreuve Collective
+
+1. compression orale et QCM : /25
+2. Comprehension des écrit : /25
+3. production écrit : /25
+
+P.E : - synthèse (Doc I) : 200 à 240 mots
+    - Essai (Doc II) : 250 mots au minimum 
+
+il faut utilisé les expression idiomatique, figure de style
+# Épreuve Individuel 
+
+- Production orale
+
+
+idée de but :      - en vu de 
+            - en fin que
+
+
+### Production orale :
+
+| Préparation (1)                                                                                       | Passation (30)                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| il y a deux document qu'on va faire une exposé + <br>Opinion personnel + Arguments + Exemples concret | 1- Exposé (préparation 1 heure) (durée 8 à 10 min )<br>    - pas de lecture intégrale (un coup d’œil)<br>	- il ne faut ajouté trop de texte dans le brouillon<br>	- Réalisation de tâche : <br>2- débat <br>    - réponse au question : (idée, arguments, Exemple, Transition) |
+

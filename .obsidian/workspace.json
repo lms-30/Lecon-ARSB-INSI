@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8fe634f8dcdd6569",
+        "id": "1cff20ce3601b1ec",
         "type": "tabs",
         "children": [
           {
-            "id": "89b42087533bc83b",
+            "id": "4d58795528347a8e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Admin sys avancé/Projet Serveur mail/Mise en place d’un Webmail sur Ubuntu 22.04.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Mise en place d’un Webmail sur Ubuntu 22.04"
             }
           }
         ]
@@ -176,15 +180,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "89b42087533bc83b",
+  "active": "4d58795528347a8e",
   "lastOpenFiles": [
+    "Admin sys avancé/Projet Crowdsec/sécuriser vos serveurs avec  installation et configuration de  CrowdSec.md",
+    "Admin sys avancé/Projet Serveur mail/Mise en place d’un Webmail sur Ubuntu 22.04.md",
+    "Admin sys avancé/Projet Crowdsec",
+    "Admin sys avancé/Projet Serveur mail",
+    "Francais/Français.md",
+    "Cryptographie/Notes.md",
+    "Cryptographie/Introduction.md",
     "Admin réseau/Module SSH (Secure SHell).md",
     "Admin réseau/Architecture LAN.md",
     "VOIP/Projet/MISE EN PLACE ET CONFIGURATION D’UN SERVEUR ASTERISK SOUS CENTOS.md",
     "Projet.md",
     "Projet Supervison reseau/Supervision réseau avec NTOPNG.md",
     "Projet Supervison reseau",
-    "Cryptographie/Notes.md",
     "Admin réseau/Bonne Pratique/TOPOLOGIE.md",
     "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
     "Admin réseau/Bonne Pratique",
@@ -202,11 +212,8 @@
     "DevOps L3/Correction/ansible-docker/pull_images.yml",
     "DevOps L3/Correction/ansible-docker/hosts",
     "DevOps L3/Correction/ansible-docker",
-    "DevOps L3/Correction/nouveau dossier",
-    "DevOps L3/Correction",
     "DevOps L3/Exercice.md",
     "DevOps L3/DevOps.md",
-    "Cryptographie/Introduction.md",
     "Lab CEHV13/Write up machines vulnérables/Grotesque 3.md",
     "Pasted image 20260119132324.png",
     "Lab CEHV13/Write up machines vulnérables/Empire LupinOne.md",

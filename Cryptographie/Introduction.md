@@ -8,7 +8,7 @@ logos : etude
 **cryptos** : cacher (sécurité)
 **cryptoanalyse** : cryptographie + analyse
 **Entropie = Somme Pilog2(1/Pi)** inventé par Claude Shannon (Théorie de l'information)
-Pourquoi analyser : pour s'assurer que la cryptographie fait son écriture caché pour la raise de sécurité.
+Pourquoi analyser : pour s'assurer que la cryptographie fait son écriture caché pour la raison de sécurité.
 
 Qui va faire la cryptographie(manangana) : Personne autorisée
 et qui va faire la cryptanalyse(mpandromba) : Personne non autorisé

@@ -139,7 +139,8 @@ Seul le destinataire peut déchiffrer à partir de sa clé privé
 
 **Q'est qui **
 
-
+**à quoi ca sert le certificat ?**
+Pour vérifier authenticité de la clé publique (pour protéger la clé publique)
 
 **Comment on fait de la signature ?**
 on peut faire la signature à partir de de l'information haché 
@@ -162,3 +163,10 @@ Fonctionnement :
 - Le client **vérifie la signature de la CA**.
 - Si la CA est de confiance, le client **fait confiance à la clé publique**.
 - Le client sait alors que **la clé publique appartient bien au destinataire**.
+
+> [!NOTE]
+> Rélation entre la clé publique et la clé privé est sens unique
+
+
+> [!NOTE] Sécurité
+> 

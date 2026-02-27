@@ -33,4 +33,15 @@ Le fait
 
 **Le chiffrement asymétrique** est ==principalement utilisé pour sécuriser l'échange de clés, garantir la confidentialité des données, et authentifier l'identité via des signatures numériques== (SSL/TLS, PGP). Contrairement au chiffrement symétrique, il résout le problème de la distribution sécurisée des clés en utilisant une paire de clés publique/privée, permettant à quiconque de chiffrer un message que seul le destinataire peut lire.
 
+Sécurité : Problème à sens unique
+Problème : Attaque de Man In the Middle
+Confiance : tiers
+
 **Le chiffrement symétrique** est ==principalement utilisé pour sa **vitesse élevée** et sa **faible consommation de ressources**, le rendant idéal pour chiffrer de gros volumes de données==. En utilisant une seule clé partagée pour le chiffrement et le déchiffrement, il est très efficace pour sécuriser le stockage de données et les communications en temps réel.
+
+Sécurité:  partage de clé.
+Problème : corruptions de Partage de clé.
+Confiance : 50% - 50%
+
+
+RSA : problè de FP (Factoring Problèm) : il 

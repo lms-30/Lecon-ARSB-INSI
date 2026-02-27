@@ -22,37 +22,57 @@ Commencer par vérifier si le firewall est active avec la commande ci-dessous :
 ```
 sudo ufw status
 ```
+![[Admin sys avancé/Projet Crowdsec/Captures/img1.png]]
+
 Si celui-ci est désactivé, on va commencer par ajouter les règles de base pour le trafic entrant : 22, 80 et 443 :
 ```
 sudo ufw allow 22 
 sudo ufw allow 80 
 sudo ufw allow 443
 ```
-Pour chaque règle (commande), un message de confirmation s’affiche pour indiquer que la règle est ajoutée.
+![[Admin sys avancé/Projet Crowdsec/Captures/img2.png]]
+
+Chaque règle (commande), un message de confirmation s’affiche pour indiquer que la règle est ajoutée. Comme nous voyons sur le captures ci-dessus.
 
 Maintenant que les règles sont créées, activer ufw :
 ```
 sudo ufw enable
 ```
+![[Admin sys avancé/Projet Crowdsec/Captures/img3.png]]
 Maintenant que ufw est activé, entrer la commande ci-dessous pour afficher le statut et la liste des règles :
 ```
 sudo ufw status verbose
 ```
+![[Admin sys avancé/Projet Crowdsec/Captures/img4.png]]
 Une dernière chose à faire avant d’installer Crowdsec, c’est d’activer les logs du firewall, car ils seront analysés afin de détecter les attaques.
 
 Entrer la commande ci-dessous pour activer les logs :
 ```
 sudo ufw logging on
 ```
+![[Admin sys avancé/Projet Crowdsec/Captures/img5.png]]
 La commande retourne : `Logging enabled`.
 
 Les logs s’enregistrent dans le fichier `/var/log/syslog`.
 
-Pour s’assurer que les logs sont bien enregistrés, depuis un autre serveur, on peut lancer un telnet sur un port non ouvert :
+Pour s’assurer que les logs sont bien enregistrés, depuis un autre machine, on peut lancer un telnet sur un port non ouvert :
 ```
-telnet ip 514
+telnet 192.168.1.132 514
 ```
-Notre serveur est prêt, nous allons passer à l’installation de Crowdsec.
+192.168.1.132 : est l'ip du serveur
+![[Admin sys avancé/Projet Crowdsec/Captures/img6.png]]
+
+Si on faire une teste par ssh qui a une port alloué dans notre serveur :
+```
+ssh -p 22 lms@192.168.1.132
+```
+![[img7.1.png]]
+![[img7.2.png]]
+
+Comme nous voyons sur le captures, on a réssuis de se connecté par ssh sur le port 22 
+
+
+Donc, notre serveur est prêt, nous allons passer à l’installation de Crowdsec.
 
 ## Crowdsec installation
 
@@ -62,6 +82,8 @@ L’installation de Crowdsec est très simple, pendant l’installation, il va a
 ```
 curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
 ```
+![[Admin sys avancé/Projet Crowdsec/Captures/img8.png]]
+
 2. Mettre à jour la liste des paquets :
 ```
 sudo apt update
@@ -72,7 +94,7 @@ sudo apt install crowdsec
 ```
 Sur la capture ci-dessous, le processus d’installation où l’on peut voir la découverte et l’installation et la configuration automatiquement pour sshd et nginx.
 
-
+![[Admin sys avancé/Projet Crowdsec/Captures/img9.png]]
 
 Crowdsec est maintenant installé et « fonctionnel ».
 
@@ -86,10 +108,16 @@ Pour afficher la liste des commandes de disponible utiliser la commande :
 ```
 cscli
 ```
+![[img10.png]]
+![[img11.png]]
+
 La commande metric permet d’afficher divers statistiques liés au service crowdsec :
 ```
 cscli metrics
 ```
+![[img12.png]]
+![[img13.png]]
+
 Comme on peut le voir sur la capture, on voit les fichiers sources utilisés et leurs statistiques et aussi les différents parsers utilisés qui permettent de détecter
 
 Pour afficher les logs qui ont matché avec une règle :
@@ -128,7 +156,6 @@ La liste des Bouncer est disponible sur le [Hub Crowdsec](https://hub.crowdsec.
 - WordPress qui a l’aide d’un plugin va empêcher l’accès site
 - Nginx
 - [Cloudflare](https://github.com/crowdsecurity/cs-cloudflare-bouncer)
-- …
 
 > Dans le tutoriel, je vais vous expliquer comment mettre en place le bouncer : [cs-firewall-bouncer](https://hub.crowdsec.net/author/crowdsecurity/bouncers/cs-firewall-bouncer).
 
@@ -159,15 +186,15 @@ tar xzvf cs-firewall-bouncer.tgz
 ```
 3. Aller dans le dossier décompressé (adapter à la version de l’archive) :
 ```
-cd cs-firewall-bouncer-vX.Y.ZZ/
+cd cs-firewall-bouncer-v0.0.12/
 ```
 4. Lancer le script d’installation :
 ```
 sudo ./install.sh
 ```
+![[img14.png]]
+
 Lors de l’installation, vous serez invité à installer `ipset` si celui-ci n’est pas présent.
-
-
 
 
 La configuration du Bouncer se trouve dans le fichier : `/etc/crowdsec/cs-firewall-bouncer/cs-firewall-bouncer.yaml`.
@@ -176,18 +203,18 @@ Afficher le fichier et vérifier qu’il est en mode iptables :
 ```
 cat /etc/crowdsec/cs-firewall-bouncer/cs-firewall-bouncer.yaml
 ```
-
-
-
-
 Utiliser la commande ci-après pour voir le Bouncer :
 ```
 sudo cscli bouncers list
 ```
+![[img15.png]]
+
 Vérifier le statut du Bouncer :
 ```
 sudo systemctl status cs-firewall-bouncer
 ```
+![[img16.png]]
+
 À partir de maintenant, les attaques seront bloquées par le firewall Linux en fonction des scénarios.
 
 ## Installer un composant avec cscli et le hub
@@ -200,9 +227,7 @@ Sur la page de la configuration [CrowdSec Hub](https://hub.crowdsec.net/author/
 ```
 sudo cscli postoverflows install crowdsecurity/seo-bots-whitelist
 ```
-
-
-
+![[img16.png]]
 
 Recharger la configuration pour la prise en compte :
 ```

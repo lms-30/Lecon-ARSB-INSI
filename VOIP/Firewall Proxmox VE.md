@@ -1,0 +1,1 @@
+Le firewall Proxmox VE est un système de sécurité inrègré qui protège les hôtes, les machines virtuelles et les containeurs (CT) contres les attaques 

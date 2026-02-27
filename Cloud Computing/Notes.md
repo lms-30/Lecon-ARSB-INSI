@@ -48,3 +48,6 @@ EC2 : service anakiray an'ny Cloud ahafana mi-lancer anazy
 VPC : Virtual Private Cloud
 
 
+IAM : Identity and Access Management ----- c'est un audit de sécurité au niveau accès
+
+Log Machines (Cloud trial) :  

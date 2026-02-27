@@ -23,7 +23,7 @@ Ce projet a pour objectif d’installer, configurer et tester un serveur **Aster
 
 ### **1.1 Matériel et Infrastructure**
 
-- Serveur physique ou machine virtuelle
+- Serveur machine virtuelle
     
 - 2 Go de RAM minimum
     
@@ -37,13 +37,13 @@ Ce projet a pour objectif d’installer, configurer et tester un serveur **Aster
     
 ### **1.2 Logiciels**
 
-- Système d’exploitation : **CentOS Stream**
+- Système d’exploitation : **CentOS Stream 8 ou plus**
     
 - Serveur de téléphonie : **Asterisk 20**
     
 - Téléphone : Linphone / téléphone SIP fixe
     
-- VirtualBox ou VMware (en environnement de test)
+- VMware (en environnement de test)
     
 ### **1.3 Compétences Requises**
 

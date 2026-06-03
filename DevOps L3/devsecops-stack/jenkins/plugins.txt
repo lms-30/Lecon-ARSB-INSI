@@ -1,0 +1,66 @@
+# ============================================================
+#  LISTE DES PLUGINS JENKINS - DEVSECOPS
+# ============================================================
+
+# --- Core Pipeline ---
+workflow-aggregator
+pipeline-stage-view
+pipeline-graph-analysis
+blueocean
+
+# --- Source Control ---
+git
+github
+github-branch-source
+gitlab-plugin
+bitbucket
+
+# --- SonarQube Integration ---
+sonar
+sonar-quality-gates
+jacoco
+
+# --- HashiCorp Vault Integration ---
+hashicorp-vault-plugin
+
+# --- Sécurité & Credentials ---
+credentials
+credentials-binding
+plain-credentials
+ssh-credentials
+mask-passwords
+
+# --- Configuration as Code ---
+configuration-as-code
+configuration-as-code-groovy
+
+# --- Docker ---
+docker-plugin
+docker-workflow
+docker-commons
+
+# --- Outils de build ---
+maven-plugin
+nodejs
+gradle
+
+# --- Notifications ---
+slack
+email-ext
+mailer
+
+# --- Qualité & Métriques ---
+junit
+cobertura
+htmlpublisher
+warnings-ng
+dependency-check-jenkins-plugin
+
+# --- Utilitaires ---
+ansicolor
+build-timeout
+timestamper
+ws-cleanup
+parameterized-trigger
+rebuild
+job-dsl

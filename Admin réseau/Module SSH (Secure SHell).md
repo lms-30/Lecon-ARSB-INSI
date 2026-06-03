@@ -1,7 +1,7 @@
 1. Console port sécurité Login /CLI
 - Par défaut, pas besoin de mot de passe pour accéder au CLI Cisco via port console
 - Peut mettre une mot de passe / console line /CLI via console
-- Console line /toujours 0 (car unseul console line)
+- Console line /toujours 0 (car un seul console line)
 **Logine sans username**
 ```
 line console 0

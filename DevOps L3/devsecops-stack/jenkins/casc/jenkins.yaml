@@ -1,0 +1,76 @@
+jenkins:
+  systemMessage: "🔐 Jenkins DevSecOps - CI/CD Pipeline | SonarQube + Vault"
+  numExecutors: 2
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "${JENKINS_ADMIN_PASSWORD}"
+        - id: "developer"
+          password: "${JENKINS_DEV_PASSWORD}"
+
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: "SONARQUBE_URL"
+            value: "http://sonarqube:9000"
+          - key: "VAULT_ADDR"
+            value: "http://vault:8200"
+
+tool:
+  sonarRunnerInstallation:
+    installations:
+      - name: "SonarScanner"
+        properties:
+          - installSource:
+              installers:
+                - sonarRunnerInstaller:
+                    id: "6.0.0.4432"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - string:
+              id: "sonarqube-token"
+              description: "🔍 SonarQube Token"
+              secret: "${SONARQUBE_TOKEN}"
+              scope: GLOBAL
+          - string:
+              id: "vault-role-id"
+              description: "🔐 Vault AppRole Role ID"
+              secret: "${VAULT_ROLE_ID}"
+              scope: GLOBAL
+          - string:
+              id: "vault-secret-id"
+              description: "🔐 Vault AppRole Secret ID"
+              secret: "${VAULT_SECRET_ID}"
+              scope: GLOBAL
+          - usernamePassword:
+              id: "git-credentials"
+              description: "📦 Git Credentials"
+              username: "${GIT_USERNAME}"
+              password: "${GIT_PASSWORD}"
+              scope: GLOBAL
+
+unclassified:
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+      - name: "SonarQube"
+        serverUrl: "http://sonarqube:9000"
+        credentialsId: "sonarqube-token"
+
+  hashicorpVault:
+    configuration:
+      vaultUrl: "http://vault:8200"
+      engineVersion: 2
+      timeout: 60
+      skipSslVerification: false

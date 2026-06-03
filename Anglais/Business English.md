@@ -44,3 +44,44 @@ a capital : a capital of a busness is the total of money used for business to ge
 | Perfect            | i have eaten            | i had eaten       | i will have eaten       |
 | perfect continuous | I have been eating rice | i had been eating | i will have been eating |
 
+
+Business English Vocabulare
+
+| ORDINARY ENGLISH | BUSINESS ENGLISH |
+| ---------------- | ---------------- |
+| to buy           | to purchase      |
+| to sell          | to trade         |
+| to help          | to assist        |
+| to ask           | to inquire       |
+| to tell          | to inform        |
+| to need          | to require       |
+| to give          | to provide       |
+| to start         | to commence      |
+| to end           | to conclude      |
+| to check         | to verify        |
+| to fix           | to risolve       |
+| to show          | to demonstrate   |
+| to use           | to utilize       |
+| think about      | to consider      |
+| to get           | to abtain        |
+| to keep          | to retain        |
+| to do            | to execute       |
+
+The birth of a revolution,
+
+Kids use PCs, to do homework, access information via internet for research, communicate with pals, play video games and collect digital music. Parents, too, use the PC for communication and entertainment but also let it handle mundane tasks like balacing the checkbook, monitoting, investment, preparing tax returns and tracking the family's genealogy. with the advent of more powerful PCs with greater storage capacity, families are digitising home movies and photos are stored on the home computer.
+
+
+Vocabulary explanation :
+
+birth : 
+homework :
+access information :
+communicate with pals :
+entertetainment :
+handle mundane tasks :
+monitoring investment :
+tax returns :
+the advent :
+home computer :
+

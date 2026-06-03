@@ -1,0 +1,198 @@
+{
+  "title": "DevSecOps Stack - Vue Globale",
+  "uid": "devsecops-overview",
+  "tags": ["devsecops", "overview"],
+  "timezone": "browser",
+  "refresh": "30s",
+  "schemaVersion": 38,
+  "panels": [
+    {
+      "id": 1,
+      "title": "🖥️ CPU Système",
+      "type": "gauge",
+      "gridPos": {"h": 8, "w": 4, "x": 0, "y": 0},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "100 - (avg(irate(node_cpu_seconds_total{mode='idle'}[5m])) * 100)",
+        "legendFormat": "CPU %"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0, "max": 100,
+          "thresholds": {
+            "steps": [
+              {"color": "green", "value": 0},
+              {"color": "yellow", "value": 70},
+              {"color": "red", "value": 85}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "💾 RAM Utilisée",
+      "type": "gauge",
+      "gridPos": {"h": 8, "w": 4, "x": 4, "y": 0},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100",
+        "legendFormat": "RAM %"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0, "max": 100,
+          "thresholds": {
+            "steps": [
+              {"color": "green", "value": 0},
+              {"color": "yellow", "value": 75},
+              {"color": "red", "value": 90}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "💿 Disque Utilisé",
+      "type": "gauge",
+      "gridPos": {"h": 8, "w": 4, "x": 8, "y": 0},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "(1 - (node_filesystem_avail_bytes{mountpoint='/'} / node_filesystem_size_bytes{mountpoint='/'})) * 100",
+        "legendFormat": "Disque %"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0, "max": 100,
+          "thresholds": {
+            "steps": [
+              {"color": "green", "value": 0},
+              {"color": "yellow", "value": 80},
+              {"color": "red", "value": 90}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "🐳 Conteneurs Actifs",
+      "type": "stat",
+      "gridPos": {"h": 8, "w": 4, "x": 12, "y": 0},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "count(container_last_seen{image!=''})",
+        "legendFormat": "Conteneurs"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "thresholds": {
+            "steps": [{"color": "blue", "value": 0}]
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "title": "📊 Services DevSecOps",
+      "type": "stat",
+      "gridPos": {"h": 8, "w": 8, "x": 16, "y": 0},
+      "datasource": "Prometheus",
+      "targets": [
+        {"expr": "up{job='jenkins'}", "legendFormat": "Jenkins"},
+        {"expr": "up{job='sonarqube'}", "legendFormat": "SonarQube"},
+        {"expr": "up{job='vault'}", "legendFormat": "Vault"},
+        {"expr": "up{job='harbor'}", "legendFormat": "Harbor"},
+        {"expr": "up{job='prometheus'}", "legendFormat": "Prometheus"}
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {"options": {"0": {"text": "DOWN", "color": "red"}}, "type": "value"},
+            {"options": {"1": {"text": "UP", "color": "green"}}, "type": "value"}
+          ],
+          "thresholds": {
+            "steps": [
+              {"color": "red", "value": 0},
+              {"color": "green", "value": 1}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "title": "📈 CPU par Conteneur",
+      "type": "timeseries",
+      "gridPos": {"h": 10, "w": 12, "x": 0, "y": 8},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "sum(rate(container_cpu_usage_seconds_total{name=~'jenkins|sonarqube|vault|harbor-core|nginx|prometheus|grafana|trivy-adapter'}[5m])) by (name) * 100",
+        "legendFormat": "{{ name }}"
+      }],
+      "fieldConfig": {
+        "defaults": {"unit": "percent"}
+      }
+    },
+    {
+      "id": 7,
+      "title": "💾 RAM par Conteneur",
+      "type": "timeseries",
+      "gridPos": {"h": 10, "w": 12, "x": 12, "y": 8},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "container_memory_usage_bytes{name=~'jenkins|sonarqube|vault|harbor-core|nginx|prometheus|grafana|trivy-adapter'}",
+        "legendFormat": "{{ name }}"
+      }],
+      "fieldConfig": {
+        "defaults": {"unit": "bytes"}
+      }
+    },
+    {
+      "id": 8,
+      "title": "🌐 Trafic Réseau",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 24, "x": 0, "y": 18},
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(node_network_receive_bytes_total{device!='lo'}[5m])",
+          "legendFormat": "↓ Reçu {{ device }}"
+        },
+        {
+          "expr": "rate(node_network_transmit_bytes_total{device!='lo'}[5m])",
+          "legendFormat": "↑ Envoyé {{ device }}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {"unit": "Bps"}
+      }
+    },
+    {
+      "id": 9,
+      "title": "⏱️ Uptime Services",
+      "type": "table",
+      "gridPos": {"h": 8, "w": 24, "x": 0, "y": 26},
+      "datasource": "Prometheus",
+      "targets": [{
+        "expr": "up",
+        "legendFormat": "{{ job }}",
+        "instant": true
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {"options": {"0": {"text": "❌ DOWN", "color": "red"}}, "type": "value"},
+            {"options": {"1": {"text": "✅ UP", "color": "green"}}, "type": "value"}
+          ]
+        }
+      }
+    }
+  ],
+  "time": {"from": "now-1h", "to": "now"}
+}

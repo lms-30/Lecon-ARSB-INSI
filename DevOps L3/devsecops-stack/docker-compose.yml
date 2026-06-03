@@ -1,0 +1,272 @@
+version: "3.9"
+
+# ============================================================
+#  DevSecOps Stack — Jenkins + SonarQube + HashiCorp Vault
+#  Auteur  : DevSecOps Setup
+#  Usage   : docker compose up -d
+# ============================================================
+
+networks:
+  devsecops_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+volumes:
+  # --- Jenkins ---
+  jenkins_home:
+    driver: local
+  jenkins_certs:
+    driver: local
+
+  # --- SonarQube ---
+  sonar_data:
+    driver: local
+  sonar_logs:
+    driver: local
+  sonar_extensions:
+    driver: local
+  sonar_conf:
+    driver: local
+
+  # --- PostgreSQL (SonarQube DB) ---
+  postgres_data:
+    driver: local
+
+  # --- HashiCorp Vault ---
+  vault_data:
+    driver: local
+  vault_logs:
+    driver: local
+  vault_config:
+    driver: local
+
+services:
+
+  # ============================================================
+  #  POSTGRESQL — Base de données pour SonarQube
+  # ============================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: devsecops_postgres
+    hostname: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-sonar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sonar_secret_2024}
+      POSTGRES_DB: ${POSTGRES_DB:-sonarqube}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.10
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sonar} -d ${POSTGRES_DB:-sonarqube}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # ============================================================
+  #  SONARQUBE — Analyse qualité & sécurité du code
+  # ============================================================
+  sonarqube:
+    image: sonarqube:10-community
+    container_name: devsecops_sonarqube
+    hostname: sonarqube
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-sonarqube}
+      SONAR_JDBC_USERNAME: ${POSTGRES_USER:-sonar}
+      SONAR_JDBC_PASSWORD: ${POSTGRES_PASSWORD:-sonar_secret_2024}
+      SONAR_WEB_HOST: 0.0.0.0
+      SONAR_WEB_PORT: 9000
+      SONAR_WEB_CONTEXT: /
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+      # Auth token pour Jenkins (généré après premier démarrage)
+      SONAR_FORCEAUTHENTICATION: "false"
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+      - sonar_extensions:/opt/sonarqube/extensions
+      - sonar_conf:/opt/sonarqube/conf
+      - ./sonarqube/conf/sonar.properties:/opt/sonarqube/conf/sonar.properties:ro
+    ports:
+      - "${SONAR_PORT:-9000}:9000"
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.20
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9000/api/system/status | grep -q '\"status\":\"UP\"' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 15
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+
+  # ============================================================
+  #  HASHICORP VAULT — Gestion des secrets
+  # ============================================================
+  vault:
+    image: hashicorp/vault:1.17
+    container_name: devsecops_vault
+    hostname: vault
+    restart: unless-stopped
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_ADDR: http://0.0.0.0:8200
+      VAULT_API_ADDR: http://vault:8200
+      VAULT_CLUSTER_ADDR: https://vault:8201
+      VAULT_LOG_LEVEL: info
+    volumes:
+      - vault_data:/vault/data
+      - vault_logs:/vault/logs
+      - vault_config:/vault/config
+      - ./vault/config/vault.hcl:/vault/config/vault.hcl:ro
+      - ./vault/policies:/vault/policies:ro
+    ports:
+      - "${VAULT_PORT:-8200}:8200"
+    command: ["vault", "server", "-config=/vault/config/vault.hcl"]
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.30
+    healthcheck:
+      test: ["CMD-SHELL", "vault status -address=http://localhost:8200 2>&1 | grep -E 'Initialized|Sealed' || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  # ============================================================
+  #  JENKINS — Serveur CI/CD
+  # ============================================================
+  jenkins:
+    image: jenkins/jenkins:lts-jdk21
+    container_name: devsecops_jenkins
+    hostname: jenkins
+    restart: unless-stopped
+    user: root
+    depends_on:
+      sonarqube:
+        condition: service_healthy
+      vault:
+        condition: service_healthy
+    environment:
+      # JVM options
+      JAVA_OPTS: >-
+        -Djenkins.install.runSetupWizard=false
+        -Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true
+        -Dorg.apache.commons.jelly.tags.fmt.timeZone=Africa/Nairobi
+        -XX:+UseContainerSupport
+        -XX:MaxRAMPercentage=70.0
+      # Jenkins Configuration as Code (JCasC)
+      CASC_JENKINS_CONFIG: /var/jenkins_home/casc
+      # URLs des services intégrés
+      SONARQUBE_URL: http://sonarqube:9000
+      VAULT_ADDR: http://vault:8200
+      # Credentials (changez en production !)
+      JENKINS_ADMIN_USER: ${JENKINS_ADMIN_USER:-admin}
+      JENKINS_ADMIN_PASSWORD: ${JENKINS_ADMIN_PASSWORD:-Admin@2024!}
+      SONAR_TOKEN: ${SONAR_TOKEN:-}
+      VAULT_TOKEN: ${VAULT_TOKEN:-}
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - jenkins_certs:/certs/client:ro
+      - ./jenkins/casc:/var/jenkins_home/casc:ro
+      - ./jenkins/init.groovy.d:/var/jenkins_home/init.groovy.d:ro
+      # Partage du socket Docker pour les builds dans Docker
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "${JENKINS_PORT:-8080}:8080"
+      - "${JENKINS_AGENT_PORT:-50000}:50000"
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.40
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/login | grep -q 'Jenkins' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 15
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+
+  # ============================================================
+  #  JENKINS AGENT — Agent Docker pour les builds
+  # ============================================================
+  jenkins-agent:
+    image: jenkins/ssh-agent:jdk21
+    container_name: devsecops_jenkins_agent
+    hostname: jenkins-agent
+    restart: unless-stopped
+    depends_on:
+      jenkins:
+        condition: service_healthy
+    environment:
+      JENKINS_AGENT_SSH_PUBKEY: ${JENKINS_AGENT_SSH_PUBKEY:-}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.41
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  # ============================================================
+  #  VAULT AGENT — Injecteur de secrets pour Jenkins
+  # ============================================================
+  vault-agent:
+    image: hashicorp/vault:1.17
+    container_name: devsecops_vault_agent
+    hostname: vault-agent
+    restart: unless-stopped
+    depends_on:
+      vault:
+        condition: service_healthy
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_ADDR: http://vault:8200
+    volumes:
+      - ./vault/config/agent.hcl:/vault/config/agent.hcl:ro
+      - jenkins_home:/jenkins_home
+    command: ["vault", "agent", "-config=/vault/config/agent.hcl"]
+    networks:
+      devsecops_net:
+        ipv4_address: 172.20.0.31
+    deploy:
+      resources:
+        limits:
+          memory: 128M

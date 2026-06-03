@@ -1,0 +1,138 @@
+groups:
+  # ============================================================
+  #  ALERTES SYSTÈME
+  # ============================================================
+  - name: system
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU élevé sur {{ $labels.instance }}"
+          description: "CPU à {{ $value | printf \"%.1f\" }}% depuis 5 minutes"
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "RAM élevée sur {{ $labels.instance }}"
+          description: "RAM utilisée à {{ $value | printf \"%.1f\" }}%"
+
+      - alert: DiskSpaceLow
+        expr: (1 - (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"})) * 100 > 85
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Disque plein sur {{ $labels.instance }}"
+          description: "Disque utilisé à {{ $value | printf \"%.1f\" }}%"
+
+  # ============================================================
+  #  ALERTES CONTENEURS
+  # ============================================================
+  - name: containers
+    rules:
+      - alert: ContainerDown
+        expr: absent(container_last_seen{name=~"jenkins|sonarqube|vault|harbor-core|nginx|prometheus|grafana"})
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Conteneur arrêté: {{ $labels.name }}"
+          description: "Le conteneur {{ $labels.name }} ne répond plus"
+
+      - alert: ContainerHighMemory
+        expr: (container_memory_usage_bytes{name=~"jenkins|sonarqube|vault|harbor-core"} / container_spec_memory_limit_bytes) * 100 > 90
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Mémoire élevée: {{ $labels.name }}"
+          description: "{{ $labels.name }} utilise {{ $value | printf \"%.1f\" }}% de sa limite mémoire"
+
+  # ============================================================
+  #  ALERTES JENKINS
+  # ============================================================
+  - name: jenkins
+    rules:
+      - alert: JenkinsDown
+        expr: up{job="jenkins"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Jenkins est inaccessible"
+          description: "Jenkins ne répond pas depuis 1 minute"
+
+      - alert: JenkinsQueueHigh
+        expr: jenkins_queue_size_value > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "File Jenkins saturée"
+          description: "{{ $value }} builds en attente dans Jenkins"
+
+  # ============================================================
+  #  ALERTES VAULT
+  # ============================================================
+  - name: vault
+    rules:
+      - alert: VaultSealed
+        expr: vault_core_unsealed == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Vault est sealed !"
+          description: "Vault est scellé — les secrets sont inaccessibles"
+
+      - alert: VaultDown
+        expr: up{job="vault"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Vault est inaccessible"
+          description: "Vault ne répond pas depuis 1 minute"
+
+  # ============================================================
+  #  ALERTES HARBOR
+  # ============================================================
+  - name: harbor
+    rules:
+      - alert: HarborDown
+        expr: up{job="harbor"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Harbor Registry inaccessible"
+          description: "Harbor ne répond pas depuis 2 minutes"
+
+      - alert: HarborHighVulnerabilities
+        expr: harbor_project_vulnerability_count{severity="Critical"} > 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Vulnérabilités critiques dans Harbor"
+          description: "{{ $value }} vulnérabilités critiques détectées dans le projet {{ $labels.project }}"
+
+  # ============================================================
+  #  ALERTES SONARQUBE
+  # ============================================================
+  - name: sonarqube
+    rules:
+      - alert: SonarQubeDown
+        expr: up{job="sonarqube"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "SonarQube inaccessible"
+          description: "SonarQube ne répond pas depuis 2 minutes"

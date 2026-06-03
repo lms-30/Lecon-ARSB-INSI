@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "05a2240405444f20",
+        "id": "6426bb33863537a7",
         "type": "tabs",
         "children": [
           {
-            "id": "b564b25f8daa8b3f",
+            "id": "18843d2d35c24434",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ADMIN SYSTEME WIN SERVEUR/SERVEUR IIS.md",
+                "file": "CyberSécurité dans l'entreprise/TP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SERVEUR IIS"
+              "title": "TP"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorateur de fichiers"
             }
           },
           {
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CyberSécurité dans l'entreprise/TP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Rétrolien pour TP"
             }
           },
           {
@@ -166,67 +167,67 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "bases:Créer une nouvelle base": false
     }
   },
-  "active": "b564b25f8daa8b3f",
+  "active": "18843d2d35c24434",
   "lastOpenFiles": [
-    "ADMIN SYSTEME WIN SERVEUR/SERVEUR IIS.md",
-    "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
-    "Admin réseau/Module SSH (Secure SHell).md",
-    "Admin réseau/La sécurité des réseau sans fil.md",
-    "VOIP/Firewall Proxmox VE.md",
-    "Lab CEHV13/Write up machines vulnérables/OWASP Juice Shop.md",
-    "Pasted image 20260219104628.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/loggin_reussi.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/loggin.png",
+    "CyberSécurité dans l'entreprise/Gouvernance et Sécurité Organisationnel.md",
+    "CyberSécurité dans l'entreprise/TP.md",
+    "CyberSécurité dans l'entreprise/RSSI.md",
+    "Hacking éthique/Empire Lupin One.md",
+    "Pitch.md",
+    "Admin réseau/CCNA 3/OSPF.md",
+    "Supervision réseau et administrationn/Exploitation avec msfconsole.md",
+    "Admin réseau/CCNA 3",
+    "Gouvernance de SI/Introduction.md",
+    "Gouvernance de SI",
+    "CyberSécurité dans l'entreprise/Cybersécurité dans l'entreprise.md",
+    "DevOps L3/devsecops-stack/harbor-devsecops/config/app.conf",
+    "DevOps L3/devsecops-stack/harbor-devsecops/config/config.yml",
+    "POWERSHELL/PowerShell.md",
+    "Supervision réseau et administrationn",
+    "POWERSHELL/Sans titre",
+    "POWERSHELL",
+    "SOC/SOC (Security Opération Center).md",
+    "DevSecOps/DevSecOps.md",
+    "CyberSécurité dans l'entreprise",
+    "DevSecOps",
+    "DevOps L3/Projet-CI-CD/electromarket_mysql_full/frontend/sed1AZObA",
+    "Lab CEHV13/Leçon.md",
     "Lab CEHV13/OWASP (Open Web Application Sécurité Project).md",
-    "Cryptographie/code_jules_cesar/cryptologie.pdf",
+    "Intéropérabilité et architecture client-serveur/Leçon.md",
     "Anglais/Business English.md",
-    "Cyberdéfence/Sociale engineering.md",
-    "Cyberdéfence/InjectionSQL.md",
-    "Anglais/Vocabulary.md",
+    "Anglais/A circular lettre.md",
+    "Cloud Computing/GCP.md",
+    "Cloud Computing/Sécuriser un environnement AWS.md",
+    "Cloud Computing/Service Cloud.md",
+    "Cloud Computing/Introduction au Cloud Computing.md",
     "DevOps L3/Exercice.md",
-    "SNMP-Simple Management Protocol (IP Services).md",
-    "Simulation Attaque défense sous VirtualBox.md",
-    "Untitled 1.base",
-    "Untitled.base",
-    "Recherche.md",
-    "lien de documentation.md",
-    "Projet.md",
-    "Lien de Documentation.md",
-    "Lien de documentation.md",
-    "Shell/Leçon.md",
-    "Projet Supervison reseau/Supervision réseau avec NTOPNG.md",
-    "doc/env.md",
-    "examen CCNA/Réseau VLAN.md",
-    "examen CCNA (IOT)/S.V de SURVEILLANCE AVEC IOT.md",
-    "Exercice docker compose/Exercice 2.md",
-    "Exercice docker compose/Exercice 1.md",
-    "Cryptographie/Tuto/Day5",
-    "Cryptographie/Tuto/Day4",
-    "Cryptographie/Tuto",
-    "ADMIN SYSTEME WIN SERVEUR/Serveur DNS.pdf",
-    "Lab CEHV13/Write up machines vulnérables/captures/im23.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im22.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im21.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im20.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im19.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im18.png",
-    "Lab CEHV13/Write up machines vulnérables/captures/im17.png",
-    "Admin sys avancé/Projet Crowdsec/Captures",
-    "Admin sys avancé/Projet Cloud.pdf",
-    "Lab CEHV13/Write up machines vulnérables/captures"
+    "DevOps L3/DevOps.md",
+    "Cours DevOps/Projet/Untitled.md",
+    "Cours DevOps/Introduction à DevOps.md",
+    "Cloud Computing/Notes.md",
+    "Cours DevOps/Pasted image 20250805104240.png",
+    "Pasted image 20260108130811.png",
+    "Pasted image 20260108130426.png",
+    "Pasted image 20260108124115.png",
+    "Pasted image 20260108123715.png",
+    "Pasted image 20260108123433.png",
+    "Pasted image 20260108121241.png",
+    "Pasted image 20260108114504.png",
+    "Pasted image 20260108114207.png",
+    "Pasted image 20260108113842.png"
   ]
 }

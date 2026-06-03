@@ -1,4 +1,4 @@
-C'est **Cryptologie** : cryptos + logos
+C'est quoi **Cryptologie** : cryptos + logos
 
 **cryptos** : cryptographie + cryptanalyse
 logos : etude
@@ -44,4 +44,4 @@ Problème : corruptions de Partage de clé.
 Confiance : 50% - 50%
 
 
-RSA : problè de FP (Factoring Problèm) : il 
+RSA : problèm de FP (Factoring Problèm) : il 

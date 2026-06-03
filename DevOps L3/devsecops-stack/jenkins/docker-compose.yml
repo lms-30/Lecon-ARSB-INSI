@@ -1,0 +1,135 @@
+
+# ============================================================
+#  JENKINS - DOCKER COMPOSE
+#  CI/CD Engine principal du pipeline DevSecOps
+#
+#  PORTS:
+#    - 8080 : Interface Web Jenkins
+#    - 50000 : Port agents Jenkins (JNLP)
+#
+#  PRÉREQUIS: Le réseau devsecops-network doit exister.
+#    → cd ../network && docker compose up -d
+#
+#  DÉMARRAGE:
+#    docker compose up -d
+#
+#  LOGS:
+#    docker compose logs -f jenkins
+#
+#  ACCÈS:
+#    http://localhost:8080
+#    Login: admin / voir .env JENKINS_ADMIN_PASSWORD
+# ============================================================
+
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkins
+    hostname: jenkins
+    restart: unless-stopped
+
+    # Variables d'environnement (depuis .env)
+    environment:
+      # Credentials Admin Jenkins
+      - JENKINS_ADMIN_PASSWORD=${JENKINS_ADMIN_PASSWORD}
+      - JENKINS_DEV_PASSWORD=${JENKINS_DEV_PASSWORD}
+
+      # Intégration SonarQube
+      - SONARQUBE_TOKEN=${SONARQUBE_TOKEN}
+      - SONARQUBE_URL=http://sonarqube:9000
+
+      # Intégration HashiCorp Vault
+      - VAULT_ADDR=http://vault:8200
+      - VAULT_ROLE_ID=${VAULT_ROLE_ID}
+      - VAULT_SECRET_ID=${VAULT_SECRET_ID}
+
+      # Git Credentials
+      - GIT_USERNAME=${GIT_USERNAME}
+      - GIT_PASSWORD=${GIT_PASSWORD}
+
+      # Shared Library (optionnel)
+      - SHARED_LIBRARY_REPO=${SHARED_LIBRARY_REPO:-}
+
+      # Email (optionnel)
+      - SMTP_HOST=${SMTP_HOST:-localhost}
+      - SMTP_PORT=${SMTP_PORT:-25}
+
+      # JVM Options
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false -Xmx2g -Xms512m
+
+      # Configuration as Code
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs
+
+    ports:
+      - "8080:8080"       # Interface Web
+      - "50000:50000"     # Agents JNLP
+
+    volumes:
+      # Données persistantes Jenkins (jobs, configs, workspace)
+      - jenkins_home:/var/jenkins_home
+
+      # Socket Docker pour lancer des conteneurs depuis les pipelines
+      - /var/run/docker.sock:/var/run/docker.sock
+
+      # Configuration JCasC (montée depuis le host pour faciliter les mises à jour)
+      - ./casc:/var/jenkins_home/casc_configs:ro
+
+      # Scripts d'initialisation Groovy
+      - ./init.groovy.d:/usr/share/jenkins/ref/init.groovy.d:ro
+
+      # Cache Maven (accélère les builds)
+      - jenkins_maven_cache:/root/.m2
+
+    networks:
+      - devsecops-network
+
+    # Vérification de santé
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/login"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+
+    # Limite des ressources
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+          cpus: "2.0"
+        reservations:
+          memory: 512M
+          cpus: "0.5"
+
+    # Labels pour la documentation et le monitoring
+    labels:
+      - "com.devsecops.service=jenkins"
+      - "com.devsecops.role=ci-cd"
+      - "com.devsecops.version=lts"
+      - "traefik.enable=false"
+
+# ============================================================
+#  VOLUMES
+# ============================================================
+volumes:
+  jenkins_home:
+    name: jenkins_home
+    driver: local
+    labels:
+      - "com.devsecops.volume=jenkins-data"
+
+  jenkins_maven_cache:
+    name: jenkins_maven_cache
+    driver: local
+    labels:
+      - "com.devsecops.volume=jenkins-maven-cache"
+
+# ============================================================
+#  RÉSEAU EXTERNE PARTAGÉ
+# ============================================================
+networks:
+  devsecops-network:
+    external: true
+    name: devsecops-network

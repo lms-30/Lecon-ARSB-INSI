@@ -1,0 +1,182 @@
+services:
+
+  # ============================================================
+  #  PROMETHEUS - Collecte des métriques
+  # ============================================================
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: prometheus
+    hostname: prometheus
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+      - '--web.enable-admin-api'
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/rules:/etc/prometheus/rules:ro
+      - prometheus_data:/prometheus
+    networks:
+      - devsecops-network
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    labels:
+      - "com.devsecops.service=prometheus"
+      - "com.devsecops.role=monitoring"
+
+  # ============================================================
+  #  GRAFANA - Visualisation des métriques
+  # ============================================================
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: grafana
+    hostname: grafana
+    restart: unless-stopped
+    depends_on:
+      prometheus:
+        condition: service_healthy
+    environment:
+      # Admin
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-Grafana@DevSecOps2024!}
+      GF_SECURITY_SECRET_KEY: ${GRAFANA_SECRET_KEY:-SW2YcwTIb9zpOOhoPsMm}
+
+      # Server
+      GF_SERVER_DOMAIN: localhost
+      GF_SERVER_ROOT_URL: http://localhost:3000
+
+      # Plugins utiles pour DevSecOps
+      GF_INSTALL_PLUGINS: >-
+        grafana-clock-panel,
+        grafana-simple-json-datasource,
+        grafana-piechart-panel,
+        vonage-status-panel
+
+      # Alerting
+      GF_ALERTING_ENABLED: "false"
+      GF_UNIFIED_ALERTING_ENABLED: "true"
+
+      # Provisioning automatique
+      GF_PATHS_PROVISIONING: /etc/grafana/provisioning
+
+      # Logs
+      GF_LOG_LEVEL: info
+      GF_METRICS_ENABLED: "true"
+
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    networks:
+      - devsecops-network
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    labels:
+      - "com.devsecops.service=grafana"
+      - "com.devsecops.role=monitoring-ui"
+
+  # ============================================================
+  #  NODE EXPORTER - Métriques système (CPU, RAM, Disque)
+  # ============================================================
+  node-exporter:
+    image: prom/node-exporter:v1.7.0
+    container_name: node-exporter
+    hostname: node-exporter
+    restart: unless-stopped
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    networks:
+      - devsecops-network
+    ports:
+      - "9100:9100"
+    labels:
+      - "com.devsecops.service=node-exporter"
+      - "com.devsecops.role=system-metrics"
+
+  # ============================================================
+  #  CADVISOR - Métriques des conteneurs Docker
+  # ============================================================
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: cadvisor
+    hostname: cadvisor
+    restart: unless-stopped
+    privileged: true
+    devices:
+      - /dev/kmsg
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    ports:
+      - "8081:8080"
+    networks:
+      - devsecops-network
+    labels:
+      - "com.devsecops.service=cadvisor"
+      - "com.devsecops.role=container-metrics"
+
+  # ============================================================
+  #  ALERTMANAGER - Gestion des alertes
+  # ============================================================
+  alertmanager:
+    image: prom/alertmanager:v0.27.0
+    container_name: alertmanager
+    hostname: alertmanager
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--storage.path=/alertmanager'
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./prometheus/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - alertmanager_data:/alertmanager
+    networks:
+      - devsecops-network
+    labels:
+      - "com.devsecops.service=alertmanager"
+      - "com.devsecops.role=alerting"
+
+# ============================================================
+#  VOLUMES
+# ============================================================
+volumes:
+  prometheus_data:
+    name: prometheus_data
+  grafana_data:
+    name: grafana_data
+  alertmanager_data:
+    name: alertmanager_data
+
+# ============================================================
+#  RÉSEAU EXTERNE PARTAGÉ
+# ============================================================
+networks:
+  devsecops-network:
+    external: true
+    name: devsecops-network

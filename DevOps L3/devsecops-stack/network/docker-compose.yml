@@ -1,0 +1,24 @@
+
+# ============================================================
+#  RÉSEAU PARTAGÉ DEVSECOPS
+#  Ce fichier crée le réseau Docker partagé entre tous les
+#  services : Jenkins, SonarQube et HashiCorp Vault.
+#
+#  DÉMARRAGE : docker compose up -d
+#  Ce compose DOIT être lancé EN PREMIER avant les autres.
+# ============================================================
+
+networks:
+  devsecops-network:
+    name: devsecops-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  # Service fictif pour forcer la création du réseau
+  network-init:
+    image: hello-world
+    networks:
+      - devsecops-network

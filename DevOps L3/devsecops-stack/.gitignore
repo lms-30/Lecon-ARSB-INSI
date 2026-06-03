@@ -1,0 +1,24 @@
+# ============================================================
+#  GITIGNORE - DEVSECOPS STACK
+#  NE JAMAIS COMMITER CES FICHIERS !
+# ============================================================
+
+# Fichiers d'environnement (contiennent des secrets)
+**/.env
+!**/.env.example
+
+# Fichiers d'initialisation Vault (contiennent les unseal keys)
+vault/scripts/vault-init.json
+vault/scripts/vault-jenkins-credentials.env
+
+# Backups
+*.tar.gz
+*.tar.bz2
+backups/
+
+# Logs locaux
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

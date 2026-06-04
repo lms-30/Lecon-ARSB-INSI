@@ -1,0 +1,14 @@
+# ===== SECRETS =====
+**/password.txt
+**/vault_token
+**/*token*
+**/*secret*
+**/*.key
+**/*.pem
+**/.env
+**/.env.*
+
+# ===== OBSIDIAN =====
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/

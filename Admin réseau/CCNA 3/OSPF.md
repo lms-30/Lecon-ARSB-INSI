@@ -1,7 +1,7 @@
 **Backbone area**(area 0) est un aire que les autres airs devraient connectées.
 
 
-**Un aire (area)** : est une ensembe de routeurs et de liaisons, partages le même LSDB.
+**Un aire (area)** : est une ensemble de routeurs et de liaisons qui partage le même LSDB.
 
 **Internal routers**(routeurs interne) : un routeur avec des interfaces dans le même area.
 

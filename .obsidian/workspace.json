@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6426bb33863537a7",
+        "id": "ab8e8e1cf2dcdfbd",
         "type": "tabs",
         "children": [
           {
-            "id": "18843d2d35c24434",
+            "id": "c155c057e8c4b35c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CyberSécurité dans l'entreprise/TP.md",
+                "file": "Cyberdéfence/Sans titre.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TP"
+              "title": "Sans titre"
             }
           }
         ]
@@ -94,8 +94,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CyberSécurité dans l'entreprise/TP.md",
-                "collapseAll": false,
+                "file": "Admin réseau/CCNA 3/Module STANDARD ACL(Access Contrôle List).md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour TP"
+              "title": "Rétrolien pour Module STANDARD ACL(Access Contrôle List)"
             }
           },
           {
@@ -113,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Admin réseau/CCNA 3/Module STANDARD ACL(Access Contrôle List).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Liens sortants de Module STANDARD ACL(Access Contrôle List)"
             }
           },
           {
@@ -132,7 +133,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Mots-clés"
             }
           },
           {
@@ -142,11 +143,11 @@
               "type": "all-properties",
               "state": {
                 "sortOrder": "frequency",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "Toutes les propriétés"
             }
           },
           {
@@ -181,53 +182,53 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "18843d2d35c24434",
+  "active": "c155c057e8c4b35c",
   "lastOpenFiles": [
-    "CyberSécurité dans l'entreprise/Gouvernance et Sécurité Organisationnel.md",
-    "CyberSécurité dans l'entreprise/TP.md",
-    "CyberSécurité dans l'entreprise/RSSI.md",
-    "Hacking éthique/Empire Lupin One.md",
-    "Pitch.md",
-    "Admin réseau/CCNA 3/OSPF.md",
+    "SOC/Jargon.pdf",
+    "Cyberdéfence/Sans titre.md",
+    "SOC/En savoir plus.md",
     "Supervision réseau et administrationn/Exploitation avec msfconsole.md",
-    "Admin réseau/CCNA 3",
-    "Gouvernance de SI/Introduction.md",
-    "Gouvernance de SI",
+    "Pasted image 20260614115849.png",
+    "Supervision réseau et administrationn/Realisation DNS et DHCP.md",
+    "Shell/Leçon.md",
+    "Shell/exercice/Exercice.md",
+    "Projet Supervison reseau/Supervision réseau avec NTOPNG.md",
+    "POWERSHELL/PowerShell.md",
+    "Math Fi/Exercice.md",
+    "Math Fi/Intérêt Composé.md",
+    "Formation DevOps/Composant Docker.md",
+    "ELK Stack/Leçon.md",
+    "DevSecOps/DevSecOps.md",
+    "CyberSécurité dans l'entreprise/TP.md",
+    "CyberSécurité dans l'entreprise/Sécurité Système.md",
+    "CyberSécurité dans l'entreprise/RSSI.md",
+    "CyberSécurité dans l'entreprise/Notes.md",
+    "CyberSécurité dans l'entreprise/Gouvernance et Sécurité Organisationnel.md",
     "CyberSécurité dans l'entreprise/Cybersécurité dans l'entreprise.md",
+    "CIS Brenchmark/CIS Docker Benchmark v1.7 PDF.pdf",
+    "Admin réseau/CCNA 3/OSPF.md",
+    "Admin réseau/CCNA 3/Module STANDARD ACL(Access Contrôle List).md",
+    "Admin réseau/Bonne Pratique/TOPOLOGIE.md",
+    "Admin réseau/captures/WhatsApp Image 2025-07-23 at 09.41.25.jpeg",
+    "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
+    "Supervision réseau et administrationn/Exercice 3.md",
+    "Pasted image 20260614114904.png",
+    "Pasted image 20260614114227.png",
+    "Pasted image 20260614113735.png",
+    "Pasted image 20260614112116.png",
+    "Pasted image 20260614111804.png",
+    "Pasted image 20260614111714.png",
+    "Pasted image 20260614111307.png",
+    "Pasted image 20260614110301.png",
+    "Gouvernance de SI/Exercice.md",
+    "Admin sys avancé/Sécurité informatique - Securite informatique_ Principes et methode a l.usage des DSI, RSSI et administrateurs.pdf",
+    "Math Fi",
+    "CIS Brenchmark/CIS_Red_Hat_Enterprise_Linux_10_Benchmark_v1.0.1.pdf",
+    "CIS Brenchmark/CIS_Red_Hat_Enterprise_Linux_10_Benchmark_v1.0.1.fr.pdf",
+    "Admin réseau/CCNA 3",
+    "Gouvernance de SI",
     "DevOps L3/devsecops-stack/harbor-devsecops/config/app.conf",
     "DevOps L3/devsecops-stack/harbor-devsecops/config/config.yml",
-    "POWERSHELL/PowerShell.md",
-    "Supervision réseau et administrationn",
-    "POWERSHELL/Sans titre",
-    "POWERSHELL",
-    "SOC/SOC (Security Opération Center).md",
-    "DevSecOps/DevSecOps.md",
-    "CyberSécurité dans l'entreprise",
-    "DevSecOps",
-    "DevOps L3/Projet-CI-CD/electromarket_mysql_full/frontend/sed1AZObA",
-    "Lab CEHV13/Leçon.md",
-    "Lab CEHV13/OWASP (Open Web Application Sécurité Project).md",
-    "Intéropérabilité et architecture client-serveur/Leçon.md",
-    "Anglais/Business English.md",
-    "Anglais/A circular lettre.md",
-    "Cloud Computing/GCP.md",
-    "Cloud Computing/Sécuriser un environnement AWS.md",
-    "Cloud Computing/Service Cloud.md",
-    "Cloud Computing/Introduction au Cloud Computing.md",
-    "DevOps L3/Exercice.md",
-    "DevOps L3/DevOps.md",
-    "Cours DevOps/Projet/Untitled.md",
-    "Cours DevOps/Introduction à DevOps.md",
-    "Cloud Computing/Notes.md",
-    "Cours DevOps/Pasted image 20250805104240.png",
-    "Pasted image 20260108130811.png",
-    "Pasted image 20260108130426.png",
-    "Pasted image 20260108124115.png",
-    "Pasted image 20260108123715.png",
-    "Pasted image 20260108123433.png",
-    "Pasted image 20260108121241.png",
-    "Pasted image 20260108114504.png",
-    "Pasted image 20260108114207.png",
-    "Pasted image 20260108113842.png"
+    "Supervision réseau et administrationn"
   ]
 }

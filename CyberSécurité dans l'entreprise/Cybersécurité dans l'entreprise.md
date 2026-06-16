@@ -10,15 +10,15 @@ radanielinarado@gmail.com
 # Introduction
 
 
-| Types d'attaques  | Types Malwares                                                                                                                                                                                                                                                                                            |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MITM              | Virus : programme malveillant<br><br><br>worm :                                                                                                                                                                                                                                                           |
-| DDoS              | Cheval de troi : est un logiciel malveillant déguisé en programme légitime pour tromper l'utilisateur et s'introduire dans un système. Contrairement aux virus, ils ne se répliquent pas eux-mêmes. Une fois installés, ils permettent de voler des données, espionner, ou prendre le contrôle à distance |
-| Injection SQL     |                                                                                                                                                                                                                                                                                                           |
-| XSS               | Spyware                                                                                                                                                                                                                                                                                                   |
-| Physhing          | rootkit                                                                                                                                                                                                                                                                                                   |
-| Social Ingenering | Ransomware                                                                                                                                                                                                                                                                                                |
-| Insider           |                                                                                                                                                                                                                                                                                                           |
+| Types d'attaques  | Types Malwares                                                                                                                                                                                                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MITM              | **Virus** : programme malveillant<br><br><br>**worm** :                                                                                                                                                                                                                                                       |
+| DDoS              | **Cheval de troi** : est un logiciel malveillant déguisé en programme légitime pour tromper l'utilisateur et s'introduire dans un système. Contrairement aux virus, ils ne se répliquent pas eux-mêmes. Une fois installés, ils permettent de voler des données, espionner, ou prendre le contrôle à distance |
+| Injection SQL     |                                                                                                                                                                                                                                                                                                               |
+| XSS               | Spyware                                                                                                                                                                                                                                                                                                       |
+| Physhing          | rootkit                                                                                                                                                                                                                                                                                                       |
+| Social Ingenering | Ransomware                                                                                                                                                                                                                                                                                                    |
+| Insider           |                                                                                                                                                                                                                                                                                                               |
 
 
 #### Notion : Menaces, vulnérabilités et Risques
@@ -32,9 +32,9 @@ le **Risque** correspond à la probabilité qu'une menace exploit une vulnérabi
 
 | V \ R | C   | M   | L   |
 | ----- | --- | --- | --- |
-| C     |     |     |     |
-| M     |     |     |     |
-| L     |     |     |     |
+| C     | C   | C   | M   |
+| M     | C   | M   | L   |
+| L     | M   | M   | L   |
 
 ### Cas pratique 1
 une entreprise utilise une mot de passe 123456,

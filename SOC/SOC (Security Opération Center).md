@@ -52,3 +52,30 @@ XDR
 PARE_FEU
 
 **Modèle SOC**
+- Modèle Externe : MSSP (Managed Security Service Provider)
+- Modèle Interne : SOC réalisé en interne, rattaché à la département du DSI
+
+### Structure Oraganisationnelles
+
+**SOC Analystes (L1) :** Opérateur de surveillance
+- Surveillance alertes
+- Triage des tickets incidents
+- Escalade au niveau 2 pour les incidents complexes
+Compétences utiles : 
+- Utilisation de SIEM
+- Gestion des système de ticketing
+- Différentes type protocole: TCP/IP, DNS, DHCP
+- Analyse et lecture des logs : syslog, Events log
+
+**Analystes (L2) :** Investigateur
+- Analyse approfondie des incidents complexes
+- Analyse malware: signature, comportementale, statique (Registre, statique(IDA,Glidia))
+- Modèle TTPs, Cyber Kill Chain
+- Investigation approfondie
+
+> [!NOTE] TTPs (Tactique, Technique, Procedures)
+> T : Objectifs
+> T : Technique utilisé pour atteindre l'objectif tactiques
+> 	Ex : Phishing, exploit vulnérabilité, Malware
+> P : Différentes étapes utilisé pendant la technique
+

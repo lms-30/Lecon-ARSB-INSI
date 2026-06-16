@@ -1,7 +1,7 @@
 
 ```
          |-------------------
-hashcorps|   Gestiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiion de Secret
+hashcorps|   Gestion des Secrets
          |
    ----- |
 Vault    |
@@ -9,3 +9,4 @@ Vault    |
          |
          |-------------------
 ```
+

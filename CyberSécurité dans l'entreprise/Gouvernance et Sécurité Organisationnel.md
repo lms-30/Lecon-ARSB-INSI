@@ -35,4 +35,4 @@ les connexion et requête important doivent être enregistrer, les logs doivent 
 
 
 ##### Bonne Pratique:
-Mettre a jour régulièrement le MySQL, supprimer les utilisateur inutile, n'est pas exposée directement le MySQL sur internet
+Mettre a jour régulièrement le MySQL, supprimer les utilisateur inutile, n'est pas exposée directement le MySQL sur internet.

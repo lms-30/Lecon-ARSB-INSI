@@ -1,4 +1,4 @@
-D’accord ! Si tu veux **installer une topologie réseau d’entreprise très sécurisée**, il faut penser **à la sécurité dès la conception** (Zero Trust, segmentation, contrôle d’accès strict). Je vais te détailler **une approche étape par étape**, avec les composants et sécurités essentielles. Je vais supposer que tu veux faire ça **en simulation ou sur du matériel réel**.
+Si On veux **installer une topologie réseau d’entreprise très sécurisée**, il faut penser **à la sécurité dès la conception** (Zero Trust, segmentation, contrôle d’accès strict).
 
 ---
 

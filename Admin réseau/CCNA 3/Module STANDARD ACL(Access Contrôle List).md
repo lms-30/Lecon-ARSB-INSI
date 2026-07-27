@@ -26,6 +26,6 @@ ACL 2:
 	Si source IP = n'import puis on refuse
 
 ### Types ACL
-1) ACLs Standard : basé seulemnt sur addresse IP source
+1) ACLs Standard : basé seulement sur adresse IP source
 	- ACL standard Numéroté
 

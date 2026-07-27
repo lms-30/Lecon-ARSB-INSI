@@ -7,3 +7,14 @@ Politique de sécurité de création Comptes
 - Attribuer le niveau d'accès minimum requis
 - Les accès temporaires doivent avoir une date d'expiration fixe et obligatoire
 
+
+
+#### TP2
+- installation ssh
+- changement du port 2222
+- désactiver connexion ssh au compte root
+- ==limiter les utilisateur autoriser==
+- bloquer les mots de passe vide
+- réduire le delait d'authentification à 30 séconde
+- limiter la tentative de connéxion à 4 réprises
+- ==Désactiver le transfert ssh via web==

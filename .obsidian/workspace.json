@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ab8e8e1cf2dcdfbd",
+        "id": "6115f3de262ac563",
         "type": "tabs",
         "children": [
           {
-            "id": "c155c057e8c4b35c",
+            "id": "25b36b8f780ff961",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyberdéfence/Sans titre.md",
+                "file": "Méthodologie de recherche scientifique/Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sans titre"
+              "title": "Notes"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 266.5
   },
   "right": {
     "id": "7014a118630b5340",
@@ -94,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Admin réseau/CCNA 3/Module STANDARD ACL(Access Contrôle List).md",
-                "collapseAll": true,
+                "file": "Cryptographie/Tuto/Communication via SSH entre Ubuntu et Kali Linux.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Module STANDARD ACL(Access Contrôle List)"
+              "title": "Rétrolien pour Communication via SSH entre Ubuntu et Kali Linux"
             }
           },
           {
@@ -182,53 +182,53 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "c155c057e8c4b35c",
+  "active": "25b36b8f780ff961",
   "lastOpenFiles": [
+    "Méthodologie de recherche scientifique/Introduction.md",
+    "Méthodologie de recherche scientifique/Notes.md",
+    "Admin réseau/CCNA 3/Inter-Channel.md",
+    "Méthodologie de recherche scientifique",
+    "Admin réseau/3 problèmes PC courants.png",
     "SOC/Jargon.pdf",
-    "Cyberdéfence/Sans titre.md",
-    "SOC/En savoir plus.md",
-    "Supervision réseau et administrationn/Exploitation avec msfconsole.md",
-    "Pasted image 20260614115849.png",
-    "Supervision réseau et administrationn/Realisation DNS et DHCP.md",
-    "Shell/Leçon.md",
-    "Shell/exercice/Exercice.md",
-    "Projet Supervison reseau/Supervision réseau avec NTOPNG.md",
-    "POWERSHELL/PowerShell.md",
-    "Math Fi/Exercice.md",
-    "Math Fi/Intérêt Composé.md",
-    "Formation DevOps/Composant Docker.md",
-    "ELK Stack/Leçon.md",
-    "DevSecOps/DevSecOps.md",
-    "CyberSécurité dans l'entreprise/TP.md",
     "CyberSécurité dans l'entreprise/Sécurité Système.md",
     "CyberSécurité dans l'entreprise/RSSI.md",
+    "CyberSécurité dans l'entreprise/Politiques de sécurité d'un serveur Apache2.md",
+    "CyberSécurité dans l'entreprise/politiquedesecuritedelinformationetdecybersecurite.pdf",
     "CyberSécurité dans l'entreprise/Notes.md",
     "CyberSécurité dans l'entreprise/Gouvernance et Sécurité Organisationnel.md",
     "CyberSécurité dans l'entreprise/Cybersécurité dans l'entreprise.md",
-    "CIS Brenchmark/CIS Docker Benchmark v1.7 PDF.pdf",
+    "Cyberdéfence/Sans titre.md",
+    "ADMIN SYSTEME WIN SERVEUR/SERVEUR IIS.md",
     "Admin réseau/CCNA 3/OSPF.md",
     "Admin réseau/CCNA 3/Module STANDARD ACL(Access Contrôle List).md",
-    "Admin réseau/Bonne Pratique/TOPOLOGIE.md",
-    "Admin réseau/captures/WhatsApp Image 2025-07-23 at 09.41.25.jpeg",
-    "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
-    "Supervision réseau et administrationn/Exercice 3.md",
-    "Pasted image 20260614114904.png",
-    "Pasted image 20260614114227.png",
-    "Pasted image 20260614113735.png",
-    "Pasted image 20260614112116.png",
-    "Pasted image 20260614111804.png",
-    "Pasted image 20260614111714.png",
-    "Pasted image 20260614111307.png",
-    "Pasted image 20260614110301.png",
-    "Gouvernance de SI/Exercice.md",
-    "Admin sys avancé/Sécurité informatique - Securite informatique_ Principes et methode a l.usage des DSI, RSSI et administrateurs.pdf",
-    "Math Fi",
+    "Cryptographie/Tuto/Communication via SSH entre Ubuntu et Kali Linux.md",
+    "Cryptographie/Tuto/Day5/README.md",
+    "Cryptographie/Tuto/Day4/README.md",
+    "Entreprenariat/Pyramide_des_besoins_de_Maslow.svg",
     "CIS Brenchmark/CIS_Red_Hat_Enterprise_Linux_10_Benchmark_v1.0.1.pdf",
+    "CI-CD/CI-CD(continue Intégration - Continue Deployement).md",
     "CIS Brenchmark/CIS_Red_Hat_Enterprise_Linux_10_Benchmark_v1.0.1.fr.pdf",
-    "Admin réseau/CCNA 3",
-    "Gouvernance de SI",
-    "DevOps L3/devsecops-stack/harbor-devsecops/config/app.conf",
-    "DevOps L3/devsecops-stack/harbor-devsecops/config/config.yml",
-    "Supervision réseau et administrationn"
+    "SOC/En savoir plus.md",
+    "CyberSécurité dans l'entreprise/TP.md",
+    "CyberSécurité dans l'entreprise/TP gestion des vulnérabilités OS (Ubuntu, Redhat ou Fedora, Debian).md",
+    "Supervision réseau et administrationn/TP MSP.md",
+    "VOIP/Sécurité Informatique.md",
+    "Admin réseau/Bonne Pratique/Configuration de base pour un serveur sécurisé.md",
+    "Supervision réseau et administrationn/Squid.md",
+    "Supervision réseau et administrationn/Execice 2.md",
+    "Supervision réseau et administrationn/Exercice.md",
+    "Supervision réseau et administrationn/exsuper.pdf",
+    "Supervision réseau et administrationn/MSP.pdf",
+    "Pasted image 20260713075253.png",
+    "Pasted image 20260713075158.png",
+    "Pasted image 20260713074827.png",
+    "Pasted image 20260713074640.png",
+    "Pasted image 20260713074550.png",
+    "Pasted image 20260713074410.png",
+    "Pasted image 20260713074210.png",
+    "Pasted image 20260713073924.png",
+    "Supervision réseau et administrationn/DDSF1.pdf",
+    "Math Fi/Escompte.pdf",
+    "Gouvernance de SI/EXI GOUVSI-1.pdf"
   ]
 }

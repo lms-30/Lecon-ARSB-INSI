@@ -25,7 +25,7 @@ Assurer la sécurité de la BDD MySQL en protégeant les données contres les ac
 - gestion des utilisateur
 chaque utilisateur doit avoir un compte
 - authentification
-le mot de passe doivent être fort et complexe, les mot de passe par défaut être change, l'accès sans mot de passe est interdit.
+le mot de passe doivent être fort et complexe, les mot de passe par défaut doit être change, l'accès sans mot de passe est interdit.
 - contrôle d'accès
 l'accès a la BDD doit être limité au machine autorisé, les droit doivent être régulièrement vérifie
 - sécurité des données

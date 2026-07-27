@@ -11,7 +11,7 @@
 	Bonnes Pratiques :
 		Un ABR maximum 2 airs (area) sinon plantage de routeur
 
-**Un intra-area Route** : un route vers une destination interieure de la même air OSPF.
+**Un intra-area Route** : un route vers une destination intérieure de la même air OSPF.
 
 **Un Inter-area Route** : est un route vers une destination au différentes air OSPF.
 

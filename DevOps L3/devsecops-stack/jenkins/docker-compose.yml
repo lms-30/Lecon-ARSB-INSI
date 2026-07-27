@@ -4,7 +4,7 @@
 #  CI/CD Engine principal du pipeline DevSecOps
 #
 #  PORTS:
-#    - 8080 : Interface Web Jenkins
+#    - 8082 : Interface Web Jenkins
 #    - 50000 : Port agents Jenkins (JNLP)
 #
 #  PRÉREQUIS: Le réseau devsecops-network doit exister.
@@ -17,7 +17,7 @@
 #    docker compose logs -f jenkins
 #
 #  ACCÈS:
-#    http://localhost:8080
+#    http://localhost:8082
 #    Login: admin / voir .env JENKINS_ADMIN_PASSWORD
 # ============================================================
 
@@ -30,31 +30,14 @@ services:
     hostname: jenkins
     restart: unless-stopped
 
+    group_add:
+      - "961" 
+
     # Variables d'environnement (depuis .env)
     environment:
       # Credentials Admin Jenkins
       - JENKINS_ADMIN_PASSWORD=${JENKINS_ADMIN_PASSWORD}
       - JENKINS_DEV_PASSWORD=${JENKINS_DEV_PASSWORD}
-
-      # Intégration SonarQube
-      - SONARQUBE_TOKEN=${SONARQUBE_TOKEN}
-      - SONARQUBE_URL=http://sonarqube:9000
-
-      # Intégration HashiCorp Vault
-      - VAULT_ADDR=http://vault:8200
-      - VAULT_ROLE_ID=${VAULT_ROLE_ID}
-      - VAULT_SECRET_ID=${VAULT_SECRET_ID}
-
-      # Git Credentials
-      - GIT_USERNAME=${GIT_USERNAME}
-      - GIT_PASSWORD=${GIT_PASSWORD}
-
-      # Shared Library (optionnel)
-      - SHARED_LIBRARY_REPO=${SHARED_LIBRARY_REPO:-}
-
-      # Email (optionnel)
-      - SMTP_HOST=${SMTP_HOST:-localhost}
-      - SMTP_PORT=${SMTP_PORT:-25}
 
       # JVM Options
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false -Xmx2g -Xms512m
@@ -63,7 +46,7 @@ services:
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs
 
     ports:
-      - "8080:8080"       # Interface Web
+      - "8082:8080"       # Interface Web
       - "50000:50000"     # Agents JNLP
 
     volumes:

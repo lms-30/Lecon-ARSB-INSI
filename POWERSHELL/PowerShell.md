@@ -115,3 +115,49 @@ Gestion de l'aide et Documentation
 
 > [!NOTE] Déclaration des hashtables
 > 
+
+#### Différence entre Wriet-Host et Write-Output en PowerShell
+Affichage simple
+```
+Write-Host "Hello, world!"
+```
+
+**Utilisation avec une direction**
+
+
+**Traitement dans une variable**
+- Write-Host
+```
+$a = Write-Host "Bonjour avec Write-Host"
+Write-Host "Contenu de la variable a : $a"
+```
+- Write-Output
+```
+$b = Write-Output "Bonjour avec Write-Output"  
+Write-Output "Contenu de la variable b : $b"
+```
+
+**Utilisation dans un pipeline**
+- Write-Host
+```
+Write-Host "pipeline avec Write-Host" | ForEach-Object{"Traitement: $_"}
+```
+- Write-Output
+```
+Write-Output "pipeline avec Write-Output" | ForEach-Object{"Traitement: $_"}
+```
+
+### Mesure Object
+
+Exporter le service dans une fichier
+```
+Get-Service | out-file servs.txt
+ou
+Get-Service > servs.txt
+```
+Voir le contenue de l'out-file sur powershell
+```
+Get-Content servs.txt
+```
+
+Get

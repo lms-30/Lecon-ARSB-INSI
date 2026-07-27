@@ -1,0 +1,2 @@
+Créer un script d'audit simplet , créer une fichier ps1 contenants les actions suivantes :
+listes les services et les enregistrer, listes les processus et afficher leur type, lister les interface réseau et afficher leur propriété, ouvrir les 5 dernier événement de  l'application dans une interface graphique, compresser la sortie en fichier Zip

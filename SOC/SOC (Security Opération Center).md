@@ -1,5 +1,5 @@
 ### Cybersécurité : 
-ensemble de méthode, processe, technologie pour protégé les actifs dans une organisation (Data, system, utilisateurs)
+ensemble de méthode, processus, technologie pour protégé les actifs dans une organisation (Data, system, utilisateurs)
 
 #### Triade de CIA
 - Confidentialité

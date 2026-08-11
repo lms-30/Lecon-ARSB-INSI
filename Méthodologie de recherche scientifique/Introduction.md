@@ -21,21 +21,21 @@ Cette étape s'appelle **l'état de l'art**. Elle consiste à faire le bilan de 
 - La problématique est la question centrale que la recherche va tenter de résoudre.
 - Elle découle directement de l'analyse de la situation actuelle.
 
-**Point critique** : si la problématique est mal posée ou fausse dès le départ, **tout ce qui en découle sera faux** : les hypothèses, le protocole, les résultats, les conclusions. La problématique est donc la fondation de tout le travail de recherche — une erreur ici se propage à l'ensemble du mémoire.
+ **Point critique** : si la problématique est mal posée ou fausse dès le départ, **tout ce qui en découle sera faux** : les hypothèses, le protocole, les résultats, les conclusions. La problématique est donc la fondation de tout le travail de recherche — une erreur ici se propage à l'ensemble du mémoire.
 
 ## 4. Océan Rouge vs Océan Bleu
 
 Cette notion permet de situer le **niveau de concurrence et d'opportunité** d'un domaine de recherche.
 
-|                       | Océan Rouge                                                         | Océan Bleu\|                                                     |
-| --------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Fréquentation**     | Domaine déjà très exploité, beaucoup de chercheurs/acteurs présents | Domaine encore peu exploré                                       |
-| **Marge de solution** | Peu d'espace pour trouver une solution réellement nouvelle          | Large possibilité de trouver et proposer une solution originale  |
-| **Difficulté**        | Concurrence forte, il faut se différencier                          | Opportunité plus grande, mais souvent moins de repères existants |
+||Océan Rouge|Océan Bleu|
+|---|---|---|
+|**Fréquentation**|Domaine déjà très exploité, beaucoup de chercheurs/acteurs présents|Domaine encore peu exploré|
+|**Marge de solution**|Peu d'espace pour trouver une solution réellement nouvelle|Large possibilité de trouver et proposer une solution originale|
+|**Difficulté**|Concurrence forte, il faut se différencier|Opportunité plus grande, mais souvent moins de repères existants|
 
 Choisir son sujet, c'est aussi choisir dans quel « océan » on se positionne.
 
-## 5. La rédaction d’introduction du mémoire
+## 5. La rédaction du mémoire
 
 La rédaction s'articule généralement autour de quatre étapes :
 
@@ -44,7 +44,7 @@ La rédaction s'articule généralement autour de quatre étapes :
 3. **Problématique** : formulation de la question de recherche, issue de l'analyse du cas général et du cas particulier.
 4. **Démarche** : présentation de la méthode suivie pour répondre à la problématique (approche, étapes, justification du cheminement).
 
-On part donc du général vers le particulier, en resserrant progressivement le sujet jusqu'à la situation précise étudiée.
+On part donc du général vers le particulier, puis vers la formulation du problème et de la démarche adoptée pour y répondre.
 
 ## 6. Protocole de recherche / Hypothèse de recherche
 
@@ -68,6 +68,54 @@ La démarche **IMRAD** (Introduction, Méthode, Résultats, Discussion) permet d
 Une question essentielle se pose : **qui va valider que la recherche est valide ?**
 
 → Pour y répondre, il faut **définir des critères** dès le départ. Ce sont ces critères qui permettent de dire objectivement si le résultat obtenu (ou le travail réalisé) est **optimal** ou non — sans critères précis, il est impossible de juger la validité ou la qualité du résultat.
+
+## 10. Qu'est-ce qu'une recherche informatique ?
+
+Une recherche informatique combine plusieurs aspects :
+
+- **Aspect expérimental** (programmeur) — mise en œuvre pratique, code, tests.
+- **Aspect science sociale** — impact humain, usage, comportement des utilisateurs.
+- **Aspect théorique** — modèles, concepts, fondements scientifiques.
+- **Aspect multidisciplinaire** — croisement avec d'autres domaines (mathématiques, réseaux, sécurité, gestion, etc.).
+
+## 11. Le processus de recherche (informatique)
+
+Le processus se déroule en quatre grandes étapes :
+
+1. **Identification d'une problématique**
+2. **État de l'art / Observation**
+3. **Proposition / contribution**
+4. **Expérimentation**
+
+À partir de la proposition/contribution, la démarche se divise en deux branches parallèles :
+
+```
+                              Identification d'une problématique
+                                              │
+                                              ▼
+                              État de l'art / observation
+                                              │
+                                              ▼
+                    ─────────── Proposition / contribution ───────────
+                    │                                                │
+                    ▼                                                ▼
+        Conception d'un prototype                            Expérimentation
+                    │                                                │
+                    ▼                                                ▼
+        Déploiement d'un prototype                          Analyse des résultats
+                    │                                                │
+                    ▼                                                ▼
+        Communication, Valorisation                        Publication des résultats
+```
+
+- **Branche gauche (côté ingénierie)** : on conçoit un prototype concret, on le déploie, puis on communique/valorise le travail réalisé.
+- **Branche droite (côté scientifique)** : on expérimente, on analyse les résultats obtenus, puis on les publie.
+
+Ces deux branches ne s'excluent pas : elles peuvent se compléter selon la nature du projet (une recherche appliquée passe souvent par les deux).
+
+## 12. Rédaction scientifique
+
+_(Section à développer — n'hésite pas à partager tes notes sur ce point pour que je complète cette partie.)_
 
 ## Schéma récapitulatif
 
@@ -110,4 +158,3 @@ Validation : définir des critères → juger si le résultat est optimal
 - Un résultat de recherche est souvent une optimisation de l'existant, pas nécessairement une performance maximale.
 - La démarche IMRAD structure la présentation de la recherche (Introduction, Méthode, Résultats, Discussion).
 - Sans critères de validation clairement définis, on ne peut pas juger si un résultat est optimal.
-

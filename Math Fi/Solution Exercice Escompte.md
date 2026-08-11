@@ -1,5 +1,3 @@
-SOLUTION
-
 ### Exercice 1 : Escompte commercial
 
 Données initiales :

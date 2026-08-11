@@ -160,4 +160,4 @@ Voir le contenue de l'out-file sur powershell
 Get-Content servs.txt
 ```
 
-Get
+

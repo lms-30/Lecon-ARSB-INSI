@@ -35,7 +35,7 @@ Cette notion permet de situer le **niveau de concurrence et d'opportunité** d'u
 
 Choisir son sujet, c'est aussi choisir dans quel « océan » on se positionne.
 
-## 5. La rédaction du mémoire
+## 5. La rédaction d'introduction
 
 La rédaction s'articule généralement autour de quatre étapes :
 
@@ -61,7 +61,7 @@ Optimiser ne signifie pas forcément **obtenir une valeur très élevée**. L'op
 
 ## 8. La démarche IMRAD
 
-La démarche **IMRAD** (Introduction, Méthode, Résultats, Discussion) permet de structurer la présentation de la recherche de façon claire et démontrable.
+La démarche **IMRED** (Introduction, Matériel , Méthode, Résultats, Discussion) permet de structurer la présentation de la recherche de façon claire et démontrable.
 
 ## 9. La validation de la recherche
 
@@ -141,7 +141,7 @@ Rédaction : Cas général → Cas particulier → Problématique → Démarche
 Résultat = Optimisation de l'existant (pas forcément valeur maximale)
         │
         ▼
-Présentation : Démarche IMRAD (Introduction, Méthode, Résultats, Discussion)
+Présentation : Démarche IMRED (Introduction, Méthode, Résultats, Discussion)
         │
         ▼
 Validation : définir des critères → juger si le résultat est optimal

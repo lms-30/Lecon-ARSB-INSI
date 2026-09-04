@@ -27,7 +27,7 @@ ny mémoire dia ts tonga tonga hoazy fa tokony miavaka @zay solution efa vitan'o
 	- présentation de lieu de stage
 	- Situation actuel dans l'entreprise qu'on a fait une stage
 3. Chapitre 2
-	- Démarche pour déployer un système (démarche du projet qu'on a fait)
+	- Démarche pour déployer un système (démarche du projet qu'on va faire)
 	- présentation des outils qu'on va utilisées
 4. Chapitre 3
 	- Réalisation
@@ -48,7 +48,7 @@ ny mémoire dia ts tonga tonga hoazy fa tokony miavaka @zay solution efa vitan'o
 
 
 Points mila tokony ho arahina :
-- mila equilibre-na le paragraphe ao anatin'le boky
+- mila equilibre-na le paragraphe sy ny nombre de page de chaque chapitre ao anatin'le boky
 - raha azo atao dia tokony tsy ampiasaina ireto : on a, il y a, être, je , faire
 - tsy asina fanazavana na parenthèses an'le listes des abriévation 
 - alahatra araka anzay nandaharana azy ny réference bibliographies na webographies

@@ -1,5 +1,5 @@
 ##### 1) Définition
-un Emprunt indivis est un emprunt ordinaire faisant l'objet d'un contrat entre d'un prêteur(créancier) et emprunteur(débiteur). Il n'y qu'un sel prêteur, il est donc indivisible d'où le qualitatif indivis.
+un Emprunt indivis est un emprunt ordinaire faisant l'objet d'un contrat entre d'un prêteur(créancier) et emprunteur(débiteur). Il n'y qu'un seul prêteur, il est donc indivisible d'où le qualitatif indivis.
 
 Le remboursement de cette emprunt se faite généralement par annuité de fin de période.
 Chaque annuité est composé de deux éléments :

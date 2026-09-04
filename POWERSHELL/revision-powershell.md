@@ -1,16 +1,14 @@
-# Fiche de révision — PowerShell
-
 ## 1. Généralités à retenir par cœur
 
-| Point | Réponse type examen |
-|---|---|
-| Qu'est-ce que PowerShell ? | Framework de gestion et d'automatisation de tâches développé par Microsoft, construit sur .NET |
-| Différence avec un shell classique (bash) ? | PowerShell manipule des **objets** (instances .NET) dans le pipeline, pas du texte brut |
-| Convention de nommage des cmdlets | **Verbe-Nom** (ex : `Get-Process`, `Set-Item`, `New-Object`) |
-| Extension des scripts | `.ps1` |
-| Comment trouver une cmdlet ? | `Get-Command` |
-| Comment explorer un objet ? | `Get-Member` (propriétés + méthodes) |
-| Comment afficher l'aide ? | `Get-Help <cmdlet>` (ajouter `-Full`, `-Examples`, ou `-Online`) |
+| Point                                       | Réponse type examen                                                                            |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Qu'est-ce que PowerShell ?                  | Framework de gestion et d'automatisation de tâches développé par Microsoft, construit sur .NET |
+| Différence avec un shell classique (bash) ? | PowerShell manipule des **objets** (instances .NET) dans le pipeline, pas du texte brut        |
+| Convention de nommage des cmdlets           | **Verbe-Nom** (ex : `Get-Process`, `Set-Item`, `New-Object`)                                   |
+| Extension des scripts                       | `.ps1`                                                                                         |
+| Comment trouver une cmdlet ?                | `Get-Command`                                                                                  |
+| Comment explorer un objet ?                 | `Get-Member` (propriétés + méthodes)                                                           |
+| Comment afficher l'aide ?                   | `Get-Help <cmdlet>` (ajouter `-Full`, `-Examples`, ou `-Online`)                               |
 
 ---
 
@@ -84,15 +82,16 @@ if ($condition) {
 ```
 
 **Opérateurs de comparaison (piège fréquent : pas de `==` ou `<`)**
-| Opérateur | Sens |
-|---|---|
-| `-eq` | égal |
-| `-ne` | différent |
-| `-lt` / `-le` | inférieur / inférieur ou égal |
-| `-gt` / `-ge` | supérieur / supérieur ou égal |
-| `-like` | comparaison avec joker (`*`) |
-| `-match` | comparaison avec regex |
-| `-and`, `-or`, `-not` | opérateurs logiques |
+
+| Opérateur             | Sens                          |
+| --------------------- | ----------------------------- |
+| `-eq`                 | égal                          |
+| `-ne`                 | différent                     |
+| `-lt` / `-le`         | inférieur / inférieur ou égal |
+| `-gt` / `-ge`         | supérieur / supérieur ou égal |
+| `-like`               | comparaison avec joker (`*`)  |
+| `-match`              | comparaison avec regex        |
+| `-and`, `-or`, `-not` | opérateurs logiques           |
 
 ---
 

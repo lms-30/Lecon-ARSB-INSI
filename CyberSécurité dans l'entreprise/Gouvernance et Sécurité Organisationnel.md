@@ -1,4 +1,4 @@
-La Gouvernance et Sécurité Organisationnel est le façon dont une entreprise organise les règle, les rôles et les action pour protéger les SI et assurer une bonne gestions des sécurités informatiques
+  La Gouvernance et Sécurité Organisationnel est le façon dont une entreprise organise les règle, les rôles et les action pour protéger les SI et assurer une bonne gestions des sécurités informatiques
 #### Politique
 document principale qui définie les règles globales de sécurités dans l'entreprise (ex: politique de mot de passe, politiques de sauvegardes).
 ### Procédure
